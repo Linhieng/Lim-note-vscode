@@ -1,0 +1,158 @@
+{
+
+    // explorer.autoReveal 配置默认是为 true 的, 也就是所有的文件和文件夹, 当打开他们的时候, 所对应的文件和文件夹将会 reveal 和 selected
+    // 在这里 reveal 和 select 的意思是, 对应的文件和文件夹将会自定被聚焦, 举一个例子来说明更加容易理解
+    // 当我们在一个 js 文件中, 点击某个包, 它会立即打开对应的源文件, 这个源文件是在 node_modules 文件夹中的
+    // 并且在以前, 这个文件所对应的位置, 也会在文件栏中显示出来, 并且焦点在文件上, 这就是所谓的 reveal 和 select
+    // 但是新版本1.74之后, 对于在 node_modules 中的文件, 将不会自动 reveal 和 select
+    // 我们能感受到的就是, 当我们跳转到 node_modules 中的文件时, node_modules 就不会展开它那巨大的文件夹!
+    // 而在以前, 每当我们打开 node_modules 的文件时, 文件栏的 node_modules 都会展开它那巨长的子文件
+    // 这导致我们每次都要去把它折叠起来, 之前我的应对措施时直接隐藏掉 node_modules。
+    // 附上这个方案被提出的 issue: https://github.com/microsoft/vscode/issues/87956
+    // 新版本解决的说明: https://code.visualstudio.com/updates/v1_74#_custom-explorer-autoreveal-logic
+    "explorer.autoRevealExclude": {
+        "**/node_modules": true,
+    },
+
+
+
+    // 一些特殊字符，比如全角字符与半角字符在一起时，vscode 会进行高亮。如果不想某些字符高亮，则可以将其添加到这里面
+    "editor.unicodeHighlight.allowedCharacters": {
+        "（": true,
+        "）": true,
+        "，": true,
+    },
+
+
+
+    "files.exclude": {
+        // 在这里, true 的优先级比 false 的优先级高, 并不会根据精准度进行匹配
+        "**/.git": true,
+        "**/.vscode": true,
+        // 只显示 s 和 m 开头的两个文件夹, 其他的都隐藏
+        "[^src|markdown]*": true,
+    },
+
+    /*
+        配置语言的文件关联, 比如将 vue 与 html 关联, 这样在 vue 中可以选择 html 的格式化工具
+        但是这样会带来一个问题, 当在 vue 中使用 ts 语法时, vscode 却会提示 ts 语法仅允许在 ts 文件中使用
+        此时如果注销 "*.vue": "html" 就没事.
+        或者关闭 html 的脚本验证 "html.validate.scripts": false
+    */
+    "files.associations": {
+        "*.vue": "html"
+    },
+
+
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************** 终端 ***************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+
+
+    /*
+        该项可用于配置终端的相关参数或者是其他的,
+        详细请见 https://code.visualstudio.com/docs/terminal/profiles
+        一般和 terminal.integrated.defaultProfile.windows 搭配使用.
+        比如:  "terminal.integrated.defaultProfile.windows": "myTerminal",
+    */
+    "terminal.integrated.profiles.windows": {
+        "myTerminal": {
+            "source": "PowerShell",
+            // source 也可以通过 path 指定
+            // "path": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+            "args": [
+                // args 代表执行 exe 时带上的参数, 比如
+                // powershell.exe -noexit -c clear; echo hello;
+                "-noexit", // 当后面会带上命令时, 就需要明确告诉程序执行完后 "不要退出"
+                "-c", // 可省略
+                "clear;", // 注意分号不能省略
+                "echo hello;"
+                /* ... chcp 65001 */
+            ]
+        },
+    },
+
+
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************** 特定文件 ***************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+
+
+    "[vue]": {
+        // 保存时执行的行为
+        "editor.codeActionsOnSave": {
+            // 保存时, 自动执行 eslint 插件的 "修复全部" 功能, 但如何找到 "source.fixAll.eslint" 不清楚
+            "source.fixAll.eslint": true,
+            "source.fixAll.stylelint": true
+        }
+    },
+
+
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************** 插件 ***************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+
+
+    // 配置 code-runner 运行时执行什么命令
+    "code-runner.executorMap": {
+        /*
+            $workspaceRoot: 工作区绝对路径。d:\CodeProject
+            $dir: 要运行的文件所在的文件夹绝对路径，末尾带\。d:\CodeProject\python\
+            $dirWithoutTrailingSlash: 要运行的文件所在的文件夹绝对路径，末尾不带\。d:\CodeProject\python
+            $fileName: 只是文件的名字，带后缀。Student.py
+            $fileNameWithoutExt: 只是文件的名字，不带后缀。Student
+            $fullFileName: 相当于$dir+$fileName。d:\CodeProject\python\Student.py
+        */
+        // vscode-ts2js 不存在会自动创建。
+        // "typescript": "cd $dir && tsc $fileName --out C:/Users/Public/vscode-ts2js/$fileNameWithoutExt.js && node C:/Users/Public/vscode-ts2js/$fileNameWithoutExt.js",
+        // TS 5.5 版本中, 需要将 out 替换成 outFile
+        "typescript": "cd $dir && tsc $fileName --outFile C:/Users/Public/vscode-ts2js/$fileNameWithoutExt.js && node C:/Users/Public/vscode-ts2js/$fileNameWithoutExt.js",
+
+        // "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt", 这是默认值
+        // 将其修改为输出到指定路径（不会自动创建路径，需要手动创建路径）
+        "c": "cd $dir && gcc $fileName -o C:/Users/Public/vscode-c-exe/$fileNameWithoutExt && C:/Users/Public/vscode-c-exe/$fileNameWithoutExt",
+
+        "scss": "sass $fileName > $fileNameWithoutExt.css",
+    },
+
+
+
+    // Run on Save 插件
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                // 输出内容是在 OUTPUT 的子窗口　—— RUN ON SAVE。 更多配置请查看 https://github.com/emeraldwalk/vscode-runonsave
+                "match": ".*",
+                "cmd": "echo ${workspaceRoot}\n ${workspaceFolder}\n ${file}\n ${fileBasename}\n ${fileDirname}\n ${fileExtname}\n ${fileBasenameNoExt}\n ${relativeFile}\n ${workspaceFolder}\n ${cwd}"
+            },
+            {
+                "match": "\\.scss$",
+                "cmd": "sass \"${file}\" > \"${fileDirname}\\${fileBasenameNoExt}.css\""
+            },
+        ]
+    }
+}

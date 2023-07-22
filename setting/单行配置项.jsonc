@@ -1,0 +1,173 @@
+{
+    /* 根据官网的划分，配置项的内容，我认为的主要有：
+            Workbench   工作台
+            Editor      编辑区
+            Terminal    终端
+            Language    对应语言文件的配置
+            Extension   插件
+     */
+
+    // 如果是为了 git 而配置代理，那么 http.proxy 是无用的。git 的代理需要配置 git config --global http.proxy http://127.0.0.1:7890
+    "http.proxy": "http://127.0.0.1:7890",
+
+
+    // 文件排序方式
+    "explorer.sortOrder": "type",
+    // 让左侧文件夹目录只有单个文件夹时不自动合并为 a/b 形式
+    "explorer.compactFolders": false,
+
+
+    //  改变触发提示时的首选位置，能解决 log 时光标优先选择 "abc" 问题
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    //  显示建议时，不显示 word 类型（abc）
+    "editor.suggest.showWords": false,
+    // 按 `Tab` 键时插入空格。该设置在 `editor.detectIndentation` 启用时根据文件内容可能会被覆盖。
+    "editor.insertSpaces": true,
+    // 一个制表符等于的空格数。在 `editor.detectIndentation` 启用时，根据文件内容，该设置可能会被覆盖。
+    "editor.tabSize": 4,
+    // 控制是否在打开文件时，基于文件内容自动检测 `editor.tabSize#` 和 `#editor.insertSpaces`。
+    "editor.detectIndentation": true,
+    // 控制在编辑器中是否允许通过拖放来移动选中内容。
+    "editor.dragAndDrop": false,
+    // 点击 ; 或者 . 时，不自动补全代码建议。
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    // 粘贴时自动格式化粘贴的内容。要求该文件有配置默认格式化程序，并且该程序支持对某一片段进行格式化。
+    "editor.formatOnPaste": true,
+    // 提示建议时, 匹配规则更松一点
+    "editor.suggest.matchOnWordStartOnly": false,
+    // 可以用于替代  rename tag, 暂时不知道是否有其他副作用
+    "editor.linkedEditing": true,
+    // 始终显示折叠按钮
+    "editor.showFoldingControls": "always",
+    // 使用基于缩进的折叠策略, 设置这个能够显示末行的花括号, 但是在 md 中 标题 `##` 就无法折叠了, 所以建议在指定文件中配置, 比如 "[c]"
+    "editor.foldingStrategy": "indentation",
+    // 滚动时, 将嵌套的当前范围在顶部粘滞显示. 比如滚动时, 当前所在函数的首行会一直显示在顶部, 如果该函数是嵌套在另外一个函数内的, 则这两个函数都会显示在顶部. 当嵌套的太多, 顶部也会被占用太多行, 此时可以使用 editor.stickyScroll.maxLineCount 指定最大行数.
+    "editor.stickyScroll.enabled": false,
+
+
+    // 打开文件时自动猜测字符集
+    "files.autoGuessEncoding": true,
+    // 自动重构文件后，是否自动保存 “被重构” 的代码
+    "files.refactoring.autoSave": false,
+    // 保存时自动添加一行空行, 这个在嵌入式开发中很有用.
+    "files.insertFinalNewline": true,
+
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * **************************  终端
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+
+    // 让终端的终止按钮始终在上面
+    "terminal.integrated.tabs.showActions": "always",
+    // 终端滚动动画, 有时候会导致卡顿, 所以还是不开启
+    "terminal.integrated.smoothScrolling": false,
+    // 更改默认终端为 bash. 这个配置项一般和 `terminal.integrated.profiles.windows` 搭配使用, 具体请见 `terminal.integrated.profiles.windows` 部分的说明. 注意: 目前(2022-09-12), 该项生效需要 "terminal.integrated.shell.windows": null, 和 "terminal.integrated.shellArgs.windows": []
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+
+    // 关闭 "输出" 的 "智能滚动", 这样 "自动滚动" 就不会自己切换了
+    "output.smartScroll.enabled": false,
+
+
+    // 只在 debug 时往调试控制台输出时，点击展开才有效果
+    "debug.console.wordWrap": false,
+
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************** 特定语言类型的文件配置
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+
+    // 默认的格式化程序是 clang-format, 这种格式化方式需要书写格式化配置文件. vscode 设置中可设置的格式化程序是 vcFormat
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.newLine.beforeElse": false,
+    // 这个能够解决 "未定义标识符", 但实际上存在该标识符的问题, 但又会导致一些 .h 文件找不到, 而且 "找不到" 并不会报错, 只是警告。
+    "C_Cpp.intelliSenseEngineFallback": "disabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+
+
+    // 允许在 markdown 选中文本粘贴时直接插入链接（要求剪贴板是合法链接）
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": true,
+
+
+    // 只对属性进行缩进处理, 不进行换行处理, 是否换行自行设置
+    //  - auto: 仅在超出行长度时才对属性进行换行。
+    //  - force: 对除第一个属性外的其他每个属性进行换行。
+    //  - force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐。
+    //  - force-expand-multiline: 对每个属性进行换行。
+    //  - aligned-multiple: 当超出折行长度时，将属性进行垂直对齐。
+    //  - preserve: 保留属性的包装
+    //  - preserve-aligned: 保留属性的包装，但对齐。
+    "html.format.wrapAttributes": "preserve-aligned",
+    // html 中的 script 中禁用 JavaScript 验证
+    "html.validate.scripts": false,
+    // 设置 html 文件中属性缩进量。需要搭配 "html.format.wrapAttributes"
+    "html.format.wrapAttributesIndentSize": 4,
+    // html 格式化时忽略这些标签, 不对其进行格式化
+    "html.format.contentUnformatted": "pre,code,textarea",
+
+
+    // js 文件中禁用 JavaScript 验证
+    "javascript.validate.enable": false,
+    // 关闭 js ts 文件的 import 路径建议
+    "javascript.suggest.paths": false,
+    // 该文件名时是否自动重构代码
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    // （vscode原生格式化）删除不必要的分号
+    "javascript.format.semicolons": "remove",
+
+
+    // 重命名文件时永远不要自动更新导入语句
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    // 关闭 js ts 文件的 import 路径建议
+    "typescript.suggest.paths": false,
+    // （vscode原生格式化）删除不必要的分号
+    "typescript.format.semicolons": "remove",
+    // 两种格式: function fn() {} 或者 function fn () {}. 即参数括号与函数名称之间是否要有空格
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "typescript.format.insertSpaceAfterConstructor": true,
+
+
+    // notebook 运行时自动格式化
+    "notebook.formatOnCellExecution": true,
+
+
+    // 格式化 json 的时候保留空行
+    "json.format.keepLines": true,
+
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************** 插件 ***************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+
+    // vetur 插件默认会自动作为 vue 的格式化程序。因为只有 vetur 提供了格式化 vue 的功能，所以就直接直接默认了。如果有多个，vscode 才会提示选择一个格式化程序
+    "vetur.format.enable": false,
+
+
+    // 输出在 'OUTPUT' 还是 'TERMINAL'
+    "code-runner.runInTerminal": true,
+
+
+    // 允许 eslint 作为格式化选项 (没用过)
+    "eslint.format.enable": true,
+}

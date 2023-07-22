@@ -1,0 +1,118 @@
+/*
+vscode 的快捷键原则:
+    尽量使用默认快捷键
+        但由于一些习惯或历史原因，该改还是得改。
+    自定义快捷键时，尽量使用组合键的模式，比如 ctrl+L 开头的全部都是自定义快捷键。
+        但如果是使用频率高，并且单次使用会点击多次的，则不要使用组合键的模式。
+    自定定义的快捷键，基本上全部都是有用的，所以就没有标出高低之分了。
+*/
+[
+    {
+        // 将变量名变成 snake_case 风格
+        "key": "ctrl+l ctrl+s",
+        "command": "editor.action.transformToSnakecase"
+    },
+    {
+        // 将变量名变成 kebab-case 风格
+        "key": "ctrl+l ctrl+k",
+        "command": "editor.action.transformToKebabcase"
+    },
+    {
+        // 将变量名变为 camelCase 驼峰风格
+        "key": "ctrl+l ctrl+c",
+        "command": "editor.action.transformToCamelcase"
+    },
+    {
+        // 首字母大写，结合 cameCase 可以实现 PascalCase 风格。
+        "key": "ctrl+l ctrl+t",
+        "command": "editor.action.transformToTitlecase"
+    },
+    {
+        // 条件：output 显示。
+        // 操作： 清空 output 输出
+        "key": "ctrl+l ctrl+l",
+        "command": "workbench.output.action.clearOutput",
+        "when": "activePanel == 'workbench.panel.output'"
+    },
+    {
+        // 多选多行合并为一行
+        "key": "ctrl+l ctrl+j",
+        "command": "editor.action.joinLines"
+    },
+    {
+        // 切换为大写
+        "key": "ctrl+l ctrl+b",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        // 切换为小写
+        "key": "ctrl+l ctrl+m",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        // 新建标签页（无标题未保存文件）。 原快捷键是 ctrl+n ，但是 ctrl+t 和默认快捷键 ctrl+shift+t 搭配我觉得更合适，因为浏览器也是这样的快捷键。
+        "key": "ctrl+t",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        // 移动光标，到达下一个匹配项。 原快捷键是 ctrl+k ctrl+d ，但因为这个快捷键使用频率很高，特别是和 ctrl+d 这个默认快捷键一起使用时效果奇佳，所以改为 ctrl+e
+        "key": "ctrl+e",
+        "command": "editor.action.moveSelectionToNextFindMatch",
+        "when": "editorFocus" // 有一个默认快捷键也是 ctrl+e 但是我基本没用过，添加 when 能够让我的快捷键优先级高于它。
+    },
+    {
+        // 移动光标，到达上一个匹配项。 与 ctrl+e 成对。
+        "key": "ctrl+shift+e",
+        "command": "editor.action.moveSelectionToPreviousFindMatch"
+    },
+    {
+        // 选中上一个匹配项。 与默认快捷键 ctrl+d 搭配使用，效果奇佳！
+        "key": "ctrl+shift+d",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
+    },
+    {
+        // 删除当前行。 默认快捷键是 ctrl+shift+k ，尝试改回原快捷键，但使用抬不习惯了， ctrl+shift+x 可以直接单手操作，比 k 方便很多。
+        "key": "ctrl+shift+x",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        // 块级注释。 oem_2 表示的是斜杆按键 /
+        "key": "ctrl+shift+oem_2",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        // 新建文件。 无默认按键，但习惯使用 ctrl+n
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
+    },
+    {
+        // 取消原本的 ctrl+n 按键功能。
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        // 新建文件夹。 同样没有默认按键。
+        "key": "alt+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        // 聚焦到侧边文件栏。
+        "key": "alt+oem_3",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        // 没用到过，而且容易误触。 所以将其禁用
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    // { 切换最左侧状态栏的可见度。 发现使用频率不高，于是取消了。 不过因为没有默认快捷键，所以还是留在这里，免得以后要用时找不到。
+    //     "key": "ctrl+shift+b",
+    //     "command": "workbench.action.toggleActivityBarVisibility"
+    // },
+    // { 缩略图可见性快捷键。 感觉有可能会用到，先放着（虽然一直没用过）
+    //     "key": "",
+    //     "command": "editor.action.toggleMinimap"
+    // },
+]
