@@ -137,6 +137,14 @@
         "c": "cd $dir && gcc $fileName -o C:/Users/Public/vscode-c-exe/$fileNameWithoutExt && C:/Users/Public/vscode-c-exe/$fileNameWithoutExt",
 
         "scss": "sass $fileName > $fileNameWithoutExt.css",
+
+        /*
+            文件所属的语言类型可以通过 `ctrl+k m` 修改。
+            文件的语言类型可以在 vscode 的右下角看到。
+            比如 shell 语言，它的语言类型是 `shellscript`，在配置时，也必须写成 `shellscript`，不然不生效
+            通过该方式运行时如果报错，可能是因为 sh 脚本开头指定了 #!/bin/bash 。因为 window 系统下没有 /bin/bash。
+         */
+        "shellscript": "bash $filename'"
     },
 
 
