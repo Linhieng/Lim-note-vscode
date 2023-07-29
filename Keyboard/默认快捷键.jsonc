@@ -93,6 +93,11 @@
         "key": "ctrl+oem_minus",
         "command": "workbench.action.zoomOut"
     },
+    {
+        // 切换 Panel 的显示与隐藏。 ✨
+        "key": "ctrl+j",
+        "command": "workbench.action.togglePanel"
+    },
 
 
     // * ************************************************************** * \\
