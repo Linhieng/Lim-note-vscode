@@ -11,4 +11,4 @@
 
 ## 🍕 VScode 没有的功能
 
-- 虚拟空格 Virtual Sapce，可以允许光标插入到行尾的任意位置 （allow caret placement）。这个功能在绘制一些字符图时很有用。 Jetbrains 家的产品(如IDEA) 是有这个功能的。
+- 虚拟空格 Virtual Space, 可以允许光标插入到行尾的任意位置 (allow caret placement)。这个功能在绘制一些字符图时很有用。 JetBrains 家的产品（如 IDEA ）是有这个功能的。
