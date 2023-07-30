@@ -1,0 +1,33 @@
+{
+    // 必须的
+    "http.proxy": "http://127.0.0.1:7890",
+    "files.trimTrailingWhitespace": true,
+    "explorer.sortOrder": "type",
+    "editor.emptySelectionClipboard": false,
+    "explorer.compactFolders": false,
+    "editor.dragAndDrop": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.suggest.matchOnWordStartOnly": false,
+    "json.format.keepLines": true,
+    "html.format.wrapAttributes": "preserve-aligned",
+
+
+    // 非必须，但有用
+    "files.autoGuessEncoding": true,
+    "editor.fontSize": 18,
+    "editor.lineHeight": 32,
+    "editor.fontFamily": "Hack, 微软雅黑",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.enabled": false,
+    "editor.showFoldingControls": "always",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.suggest.localityBonus": true,
+    "window.menuBarVisibility": "compact",
+    "workbench.iconTheme": "material-icon-theme",
+    "output.smartScroll.enabled": false,
+    "debug.console.wordWrap": false,
+    "javascript.format.semicolons": "remove", "typescript.format.semicolons": "remove",
+    "javascript.format.insertSpaceAfterConstructor": true, "typescript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true, "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+}

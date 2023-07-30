@@ -7,14 +7,16 @@
             Extension   插件
      */
 
-    // 如果是为了 git 而配置代理，那么 http.proxy 是无用的。git 的代理需要配置 git config --global http.proxy http://127.0.0.1:7890
+    // 该代理只对 vscode 本身控制的网络有效，比如插件下载和安装。  git 的代理需要配置 git config --global http.proxy http://127.0.0.1:7890
     "http.proxy": "http://127.0.0.1:7890",
 
 
     // 文件排序方式
     "explorer.sortOrder": "type",
-    // 让左侧文件夹目录只有单个文件夹时不自动合并为 a/b 形式
+    // 让左侧文件夹目录只有单个文件夹时不自动合并为 a/b/c/d/e 形式
     "explorer.compactFolders": false,
+    // 删除时是否询问
+    "explorer.confirmDelete": true,
 
 
     //  改变触发提示时的首选位置，能解决 log 时光标优先选择 "abc" 问题
@@ -43,14 +45,44 @@
     "editor.foldingStrategy": "indentation",
     // 滚动时, 将嵌套的当前范围在顶部粘滞显示. 比如滚动时, 当前所在函数的首行会一直显示在顶部, 如果该函数是嵌套在另外一个函数内的, 则这两个函数都会显示在顶部. 当嵌套的太多, 顶部也会被占用太多行, 此时可以使用 editor.stickyScroll.maxLineCount 指定最大行数.
     "editor.stickyScroll.enabled": false,
+    // 对于非 ASCII 字符如何显示高亮。 默认是当非 ASCII 符号与 ASCII 符号相连时给出高亮提示。
+    "editor.unicodeHighlight.nonBasicASCII": "inUntrustedWorkspace", /* 默认 */
+    // 关闭无障碍（屏幕阅读器）功能。 在 Window 上使用 “讲述者” 时， vscode 默认为其服务。
+    "editor.accessibilitySupport": "off",
+    // 字体大小
+    "editor.fontSize": 18,
+    // 字体行高
+    "editor.lineHeight": 32,
+    // 字体
+    "editor.fontFamily": "Hack, 微软雅黑",
+    // 光标宽度
+    "editor.cursorWidth": 4,
+    // 光标样式
+    "editor.cursorStyle": "line",
+    // 光标闪烁方式
+    "editor.cursorBlinking": "phase",
+    // 移动光标时是有动画效果
+    "editor.cursorSmoothCaretAnimation": "on",
+    // 缩略图是否显示
+    "editor.minimap.enabled": false,
+    // 未选中内容时剪切，将不会剪切当前行
+    "editor.emptySelectionClipboard": false, /* */
+    // 显示建议时，优先显示离光标近的
+    "editor.suggest.localityBonus": true,
+    // 如何放置 snippet 类型的建议。
+    "editor.snippetSuggestions": "inline",
 
 
-    // 打开文件时自动猜测字符集
+    // 不开启自动保存。就算你没保存就关闭了 vscode, vscode 也会自动帮你保存的！
+    "files.autoSave": "off",
+    // 打开文件时自动猜测字符集(编码格式)
     "files.autoGuessEncoding": true,
-    // 自动重构文件后，是否自动保存 “被重构” 的代码
+    // 自动重构文件后，是否自动保存 “被重构” 的代码。 如果已经开启不自动保存，则该配置项无用。
     "files.refactoring.autoSave": false,
     // 保存时自动添加一行空行, 这个在嵌入式开发中很有用.
     "files.insertFinalNewline": true,
+    // 保存文件时自动删除行尾空格
+    "files.trimTrailingWhitespace": true,
 
 
     // * ************************************************************** * \\
@@ -64,7 +96,7 @@
     // * ************************************************************** * \\
 
 
-    // 让终端的终止按钮始终在上面
+    // 让终端的终止按钮始终在上面。当压缩宽度为只显示终端图标时，默认配置项就能实现 always 的效果。
     "terminal.integrated.tabs.showActions": "always",
     // 终端滚动动画, 有时候会导致卡顿, 所以还是不开启
     "terminal.integrated.smoothScrolling": false,
@@ -99,46 +131,43 @@
     "C_Cpp.intelliSenseEngine": "Tag Parser",
 
 
-    // 允许在 markdown 选中文本粘贴时直接插入链接（要求剪贴板是合法链接）
+    // 允许在 markdown 选中文本粘贴时直接插入链接（要求剪贴板是合法链接）（暂时有点 bug, 等待修复中）
     "markdown.editor.pasteUrlAsFormattedLink.enabled": true,
 
+    // 鼠标 hover 在 notebook 的 cell 上时直接显示工具类，不需要聚焦到 cell 上
+    "notebook.cellToolbarVisibility": "hover",
 
-    // 只对属性进行缩进处理, 不进行换行处理, 是否换行自行设置
-    //  - auto: 仅在超出行长度时才对属性进行换行。
-    //  - force: 对除第一个属性外的其他每个属性进行换行。
-    //  - force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐。
-    //  - force-expand-multiline: 对每个属性进行换行。
-    //  - aligned-multiple: 当超出折行长度时，将属性进行垂直对齐。
-    //  - preserve: 保留属性的包装
-    //  - preserve-aligned: 保留属性的包装，但对齐。
+
+    // 规定属性的换行长度
+    "html.format.wrapLineLength": 120,
+    /*
+        - preserve         只有在属性长度超过规定长度时才会换行对齐。 对齐的参考对象是元素
+        - preserve-aligned 只有在属性长度超过规定长度时才会换行对齐。 对齐的参考对象是第一个属性
+        - force                  除第一个属性外，其他属性全部单独一行，并对齐。 对齐的参考对象是元素
+        - force-aligned          除第一个属性外，其他属性全部单独一行，并对齐。 对齐的参考对象是第一个属性
+        - force-expand-multiline 每个属性单独成行！此时的对齐的参考对象只会是元素
+        - auto             当属性合并成一行不会超出规定长度时，自动合成一行。 当合成一行后超出规定长度时，只对超出部分进行换行对其。对齐的参考对象是元素
+        - aligned-multiple 当属性合并成一行不会超出规定长度时，自动合成一行。 当合成一行后超出规定长度时，只对超出部分进行换行对其。对齐的参考对象是第一个属性
+     */
     "html.format.wrapAttributes": "preserve-aligned",
-    // html 中的 script 中禁用 JavaScript 验证
-    "html.validate.scripts": false,
-    // 设置 html 文件中属性缩进量。需要搭配 "html.format.wrapAttributes"
+    // 规定属性换行时的缩进量，只有当 html.format.wrapAttributes 属性值不带 aligned 时才有效。
     "html.format.wrapAttributesIndentSize": 4,
     // html 格式化时忽略这些标签, 不对其进行格式化
     "html.format.contentUnformatted": "pre,code,textarea",
+    // html 中的 script 中禁用 JavaScript 验证
+    "html.validate.scripts": false,
 
 
-    // js 文件中禁用 JavaScript 验证
-    "javascript.validate.enable": false,
+    //（vscode原生格式化） 删除不必要的分号
+    "javascript.format.semicolons": "remove", "typescript.format.semicolons": "remove",
+    // 修改文件名时是否重构其他文件中的代码（自动更新导入语句）
+    "javascript.updateImportsOnFileMove.enabled": "prompt", "typescript.updateImportsOnFileMove.enabled": "prompt",
     // 关闭 js ts 文件的 import 路径建议
-    "javascript.suggest.paths": false,
-    // 该文件名时是否自动重构代码
-    "javascript.updateImportsOnFileMove.enabled": "prompt",
-    // （vscode原生格式化）删除不必要的分号
-    "javascript.format.semicolons": "remove",
-
-
-    // 重命名文件时永远不要自动更新导入语句
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    // 关闭 js ts 文件的 import 路径建议
-    "typescript.suggest.paths": false,
-    // （vscode原生格式化）删除不必要的分号
-    "typescript.format.semicolons": "remove",
-    // 两种格式: function fn() {} 或者 function fn () {}. 即参数括号与函数名称之间是否要有空格
-    "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
-    "typescript.format.insertSpaceAfterConstructor": true,
+    "javascript.suggest.paths": false, "typescript.suggest.paths": false,
+    // 在 constructor 构造函数之后插入空格，即 constructor () { }
+    "javascript.format.insertSpaceAfterConstructor": true, "typescript.format.insertSpaceAfterConstructor": true,
+    // 在函数名后插入空格，即 function fn () {} 而不是 function fn() {}
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true, "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
 
 
     // notebook 运行时自动格式化
@@ -164,7 +193,7 @@
     "vetur.format.enable": false,
 
 
-    // 输出在 'OUTPUT' 还是 'TERMINAL'
+    // 输出在 'OUTPUT' 还是 'TERMINAL'。更多有关 code-runner 的配置项直接查看对应插件的 Features, 写的很详细
     "code-runner.runInTerminal": true,
 
 

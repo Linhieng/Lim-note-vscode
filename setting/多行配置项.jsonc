@@ -44,6 +44,15 @@
     },
 
 
+    "workbench.colorCustomizations": {
+        /*
+            editor.findMatch* 配置 ctrl+f 搜索时，选中项的样式。 默认的样式有点反光。
+         */
+        "editor.findMatchBorder": "#FFFFFF",
+        "editor.findMatchBackground": "#ffffff11",
+    },
+
+
 
     // * ************************************************************** * \\
     // * ************************************************************** * \\
