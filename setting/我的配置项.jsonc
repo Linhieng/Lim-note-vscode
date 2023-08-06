@@ -13,6 +13,7 @@
 
 
     // 非必须，但有用
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
     "files.autoGuessEncoding": true,
     "editor.fontSize": 18,
     "editor.lineHeight": 32,

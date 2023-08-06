@@ -131,8 +131,9 @@
     "C_Cpp.intelliSenseEngine": "Tag Parser",
 
 
-    // 允许在 markdown 选中文本粘贴时直接插入链接（要求剪贴板是合法链接）（暂时有点 bug, 等待修复中）
-    "markdown.editor.pasteUrlAsFormattedLink.enabled": true,
+    // 允许在 markdown 选中文本粘贴时直接插入链接。 从原本的布尔值变成了现在的 smart, 但暂时还没没有提供快捷键。
+    // smart 的效果是：在代码块内插入链接，或替换原有链接时不会自动转换。
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
 
     // 鼠标 hover 在 notebook 的 cell 上时直接显示工具类，不需要聚焦到 cell 上
     "notebook.cellToolbarVisibility": "hover",
