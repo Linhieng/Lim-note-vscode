@@ -11,11 +11,11 @@
     "json.format.keepLines": true,
     "html.format.wrapAttributes": "preserve-aligned",
 
-
     // 非必须，但有用
+    "notebook.cellToolbarVisibility": "hover",
     "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
     "files.autoGuessEncoding": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.lineHeight": 32,
     "editor.fontFamily": "Hack, 微软雅黑",
     "editor.cursorBlinking": "expand",
@@ -31,4 +31,15 @@
     "javascript.format.semicolons": "remove", "typescript.format.semicolons": "remove",
     "javascript.format.insertSpaceAfterConstructor": true, "typescript.format.insertSpaceAfterConstructor": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true, "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+
+
+    // 多行配置项
+    "workbench.colorCustomizations": {
+        "editor.findMatchBorder": "#ffffff99",
+        "editor.findMatchBackground": "#ffffff11",
+    },
+    "workbench.editorAssociations": {
+        "*.csv": "gc-excelviewer-csv-editor"
+    },
+
 }

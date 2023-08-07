@@ -40,7 +40,8 @@
         或者关闭 html 的脚本验证 "html.validate.scripts": false
     */
     "files.associations": {
-        "*.vue": "html"
+        "*.vue": "html",
+        ".eslintrc.cjs": "javascript"
     },
 
 
@@ -50,6 +51,13 @@
          */
         "editor.findMatchBorder": "#FFFFFF",
         "editor.findMatchBackground": "#ffffff11",
+    },
+
+
+    // 指定打开文件的方式
+    "workbench.editorAssociations": {
+        // 使用 Excel Viewer 扩展工具打开 csv 文件
+        "*.csv": "gc-excelviewer-csv-editor"
     },
 
 
