@@ -1,17 +1,11 @@
+# 代码片段
 
-Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
-description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-$1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-same ids are connected.
-Example:
+全局代码片段支持以下参数：
 
-```json
-"Print to console": {
-	"prefix": "log",
-	"body": [
-		"console.log('$1');",
-		"$2"
-	],
-	"description": "Log output to console"
-}
-```
+- `scope`：指定作用范围，不能乱写。并且区分大小写。使用逗号分割多个值。具体有哪些可用值，可通过 `ctrl+k m` 快捷键查看，注意是括号内的值。比如是 `html` 而不是 `HTML`，是 `markdown` 而不是 `Markdown`。
+
+- `prefix`：触发代码片段的前缀，通过字符串数组可以设置多个触发前缀。
+
+- `body`：具体的代码片段。可以是字符串，也可以是字符串数组。其中有一些特殊变量值，比如 `$1`, `$2`, ... 可指定 tab 跳转位置。`$0` 是最终光标的停留位置。`${1:default_name}`, `{2:default_name}`, ... 在 `$1`, `$2` 的基础上支持默认值（占位字符串）
+
+- `description`：描述信息
