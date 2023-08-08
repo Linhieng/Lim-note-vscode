@@ -1,0 +1,36 @@
+[
+    // HTML 文件
+    {
+        "初始化 HTML 文件": {
+            "prefix": [ "!", "！" ],
+            "body": [
+                "<!DOCTYPE html>",
+                "<html lang='zh-CN'>",
+                "",
+                "<head>",
+                "  <meta charset='UTF-8'>",
+                "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+                "  <title>${1:Document}</title>",
+                "</head>",
+                "",
+                "<body>",
+                "  $2",
+                "</body>",
+                "",
+                "</html>"
+            ],
+            "description": "默认语言为中文的模板"
+        }
+    },
+
+    // markdown 文件
+    {
+        "可缩进空格": {
+            "prefix": [ "  ", "kg", "empty", "emsp" ],
+            "body": [
+                "&emsp;&emsp;"
+            ],
+            "description": "某些情况下想要使用空格缩进，但由不想让 md 文件忽略这些空格时，可以使用 emsp 空格"
+        }
+    }
+]
