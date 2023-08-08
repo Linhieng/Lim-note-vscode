@@ -19,10 +19,6 @@
     "explorer.confirmDelete": true,
 
 
-    //  改变触发提示时的首选位置，能解决 log 时光标优先选择 "abc" 问题
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    //  显示建议时，不显示 word 类型（abc）
-    "editor.suggest.showWords": false,
     // 按 `Tab` 键时插入空格。该设置在 `editor.detectIndentation` 启用时根据文件内容可能会被覆盖。
     "editor.insertSpaces": true,
     // 一个制表符等于的空格数。在 `editor.detectIndentation` 启用时，根据文件内容，该设置可能会被覆盖。
@@ -35,8 +31,6 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     // 粘贴时自动格式化粘贴的内容。要求该文件有配置默认格式化程序，并且该程序支持对某一片段进行格式化。
     "editor.formatOnPaste": true,
-    // 提示建议时, 匹配规则更松一点
-    "editor.suggest.matchOnWordStartOnly": false,
     // 可以用于替代  rename tag, 暂时不知道是否有其他副作用
     "editor.linkedEditing": true,
     // 始终显示折叠按钮
@@ -67,10 +61,6 @@
     "editor.minimap.enabled": false,
     // 未选中内容时剪切，将不会剪切当前行
     "editor.emptySelectionClipboard": false, /* */
-    // 显示建议时，优先显示离光标近的
-    "editor.suggest.localityBonus": true,
-    // 如何放置 snippet 类型的建议。
-    "editor.snippetSuggestions": "inline",
 
 
     // 不开启自动保存。就算你没保存就关闭了 vscode, vscode 也会自动帮你保存的！

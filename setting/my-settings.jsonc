@@ -1,41 +1,59 @@
 {
-    // 必须的
+    //
     "http.proxy": "http://127.0.0.1:7890",
-    "files.trimTrailingWhitespace": true,
-    "explorer.sortOrder": "type",
-    "editor.emptySelectionClipboard": false,
-    "explorer.compactFolders": false,
-    "editor.dragAndDrop": false,
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.suggest.matchOnWordStartOnly": false,
-    "json.format.keepLines": true,
-    "html.format.wrapAttributes": "preserve-aligned",
 
-    // 非必须，但有用
-    "notebook.cellToolbarVisibility": "hover",
-    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+    //
+    "files.trimTrailingWhitespace": true,
     "files.autoGuessEncoding": true,
+
+    //
+    "explorer.sortOrder": "type",
+    "explorer.compactFolders": false,
+
+    // suggest
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.snippetSuggestions": "top",
+    // 更改习惯中 "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.suggest.matchOnWordStartOnly": false,
+    // 似乎没什么效果，观察中 "editor.suggest.localityBonus": true,
+
+    // 光标
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+
+    // 字体
     "editor.fontSize": 16,
     "editor.lineHeight": 32,
     "editor.fontFamily": "Hack, 微软雅黑",
-    "editor.cursorBlinking": "expand",
-    "editor.cursorSmoothCaretAnimation": "on",
+
+    //
+    "editor.emptySelectionClipboard": false,
+    "editor.dragAndDrop": false,
     "editor.minimap.enabled": false,
     "editor.showFoldingControls": "always",
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.suggest.localityBonus": true,
-    "window.menuBarVisibility": "compact",
-    "workbench.iconTheme": "material-icon-theme",
-    "output.smartScroll.enabled": false,
-    "debug.console.wordWrap": false,
+    "editor.accessibilitySupport": "off",
+
+    // 格式化
+    "json.format.keepLines": true,
+    "html.format.wrapAttributes": "preserve-aligned",
     "javascript.format.semicolons": "remove", "typescript.format.semicolons": "remove",
     "javascript.format.insertSpaceAfterConstructor": true, "typescript.format.insertSpaceAfterConstructor": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true, "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
 
+    //
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+    "notebook.cellToolbarVisibility": "hover",
+    "workbench.iconTheme": "material-icon-theme",
+    "output.smartScroll.enabled": false,
+    "debug.console.wordWrap": false,
 
-    // 多行配置项
+    //
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+
+
     "files.exclude": {
-        "desktop.ini": true, // 该文件是修改文件夹自定义图标的 icon
+        "desktop.ini": true,
     },
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#ffffff99",
