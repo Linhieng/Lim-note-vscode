@@ -34,6 +34,9 @@
 
 
     // 多行配置项
+    "files.exclude": {
+        "desktop.ini": true, // 该文件是修改文件夹自定义图标的 icon
+    },
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#ffffff99",
         "editor.findMatchBackground": "#ffffff11",
@@ -41,5 +44,10 @@
     "workbench.editorAssociations": {
         "*.csv": "gc-excelviewer-csv-editor"
     },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": "on"
+        },
+    }
 
 }

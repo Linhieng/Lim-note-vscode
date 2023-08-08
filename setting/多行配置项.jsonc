@@ -120,6 +120,15 @@
         }
     },
 
+    "[markdown]": {
+        // 当配置了 snippets 后，会发现 markdown 文件中不会自动显示 suggest。这就是因为下面这个配置
+        "editor.quickSuggestions": { // 配置在哪些上下文中快速显示 suggest, 该配置项需要 "editor.suggestOnTriggerCharacters": true
+            "comments": "off", // 在注释上下文中不开启快速建议。
+            "strings": "off", // 在字符串上下文中不开启快速建议
+            "other": "on" // 我们大多数情况下需要的是这个。
+        },
+    }
+
 
 
     // * ************************************************************** * \\
