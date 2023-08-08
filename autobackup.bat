@@ -32,4 +32,7 @@ for %%f in (%file_list%) do (
     )
 )
 
+cd %~dp0
+git push
+
 exit
