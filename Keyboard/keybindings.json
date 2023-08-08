@@ -107,6 +107,12 @@ vscode 的快捷键原则:
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
     },
+    {
+        // 与原有快捷键冲突
+        "key": "ctrl+shift+enter",
+        "command": "-markdown-preview-enhanced.runAllCodeChunks",
+        "when": "editorLangId == 'markdown'"
+    },
     // { 切换最左侧状态栏的可见度。 发现使用频率不高，于是取消了。 不过因为没有默认快捷键，所以还是留在这里，免得以后要用时找不到。
     //     "key": "ctrl+shift+b",
     //     "command": "workbench.action.toggleActivityBarVisibility"

@@ -51,6 +51,8 @@
     "window.menuBarVisibility": "compact",
     "window.commandCenter": false,
 
+    //
+    "code-runner.saveFileBeforeRun": true,
 
     "files.exclude": {
         "desktop.ini": true,
@@ -63,9 +65,9 @@
         "*.csv": "gc-excelviewer-csv-editor"
     },
     "[markdown]": {
+        "editor.suggest.matchOnWordStartOnly": true,
         "editor.quickSuggestions": {
             "other": "on"
         },
-    }
-
+    },
 }

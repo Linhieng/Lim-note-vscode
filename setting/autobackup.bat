@@ -2,7 +2,7 @@
 chcp 65001 > nul
 
 if "%1"=="runtask" goto runtask
-    set taskname=自动备份我的代码片段
+    set taskname=自动备份我的配置项
     set bat_path=%0
     set arguments=runtask
     set taskrun=%bat_path% %arguments%
@@ -13,7 +13,7 @@ if "%1"=="runtask" goto runtask
     exit
 :runtask
 
-set source_file=%UserProfile%\AppData\Roaming\Code\User\snippets\我的代码片段.code-snippets
+set source_file=%UserProfile%\AppData\Roaming\Code\User\settings.json
 set destination=%~dp0
 
 if not exist %source_file% (
