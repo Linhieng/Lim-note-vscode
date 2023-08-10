@@ -1,7 +1,7 @@
 ## 🍕 安装的扩展插件
 
 extension Identifier                  | extension name                         | 简单说明
---------------------------------------|----------------------------------------|-------------------
+--------------------------------------|----------------------------------------|------------------------------------
 streetsidesoftware.code-spell-checker | Spell Checker                          | 拼写检查
 donjayamanne.githistory               | Git History                            | 查看 Git 历史记录
 kisstkondoros.vscode-gutter-preview   | Image preview                          | 图图片预览
@@ -22,6 +22,7 @@ shd101wyy.markdown-preview-enhanced   | Markdown Preview Enhanced              |
 grapecity.gc-excelviewer              | Excel Viewer                           | vscode 查看 Excel 文件
 lixquid.calculator                    | Calculator                             | 选择数学表达式直接计算结果
 emeraldwalk.runonsave                 | Run on Save                            | 保存时自动执行命令
+shahilkumar.docxreader                | Docx/ODT Viewer                        | 可以简单的查看 docx 内容，适合快速查看多个 docx 文件内容！
 
 ## 🍕 没有安装或使用的插件
 
