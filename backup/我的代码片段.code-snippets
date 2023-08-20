@@ -43,14 +43,4 @@
 		"prefix": [ "##" ],
 		"body": "## 🍕 $0"
 	},
-	"❌": {
-		"scope": "markdown",
-		"prefix": [ "error" ],
-		"body": "❌"
-	},
-	"✔️": {
-		"scope": "markdown",
-		"prefix": [ "success" ],
-		"body": "✔️"
-	},
 }

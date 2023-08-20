@@ -113,12 +113,10 @@ vscode 的快捷键原则:
         "command": "-markdown-preview-enhanced.runAllCodeChunks",
         "when": "editorLangId == 'markdown'"
     },
-    // { 切换最左侧状态栏的可见度。 发现使用频率不高，于是取消了。 不过因为没有默认快捷键，所以还是留在这里，免得以后要用时找不到。
-    //     "key": "ctrl+shift+b",
-    //     "command": "workbench.action.toggleActivityBarVisibility"
-    // },
-    // { 缩略图可见性快捷键。 感觉有可能会用到，先放着（虽然一直没用过）
-    //     "key": "",
-    //     "command": "editor.action.toggleMinimap"
-    // },
+    {
+        // py 中混用空格缩进和制表符缩进时，容易报错。提供的格式化工具又不会自动转换缩进类型。而且不怎么用到格式化，所以直接占用格式化快捷键。
+        "key": "shift+alt+f",
+        "command": "editor.action.indentationToSpaces",
+        "when": "(editorLangId == 'python' || resourceFilename =~ /.*\\.py/i) && !editorHasSelection"
+    },
 ]
