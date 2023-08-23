@@ -61,44 +61,6 @@
     },
 
 
-
-    // * ************************************************************** * \\
-    // * ************************************************************** * \\
-    // * ************************************************************** * \\
-    // * ************************************************************** * \\
-    // * ************************** 终端 ***************************** * \\
-    // * ************************************************************** * \\
-    // * ************************************************************** * \\
-    // * ************************************************************** * \\
-    // * ************************************************************** * \\
-
-
-
-    /*
-        该项可用于配置终端的相关参数或者是其他的,
-        详细请见 https://code.visualstudio.com/docs/terminal/profiles
-        一般和 terminal.integrated.defaultProfile.windows 搭配使用.
-        比如:  "terminal.integrated.defaultProfile.windows": "myTerminal",
-    */
-    "terminal.integrated.profiles.windows": {
-        "myTerminal": {
-            "source": "PowerShell",
-            // source 也可以通过 path 指定
-            // "path": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
-            "args": [
-                // args 代表执行 exe 时带上的参数, 比如
-                // powershell.exe -noexit -c clear; echo hello;
-                "-noexit", // 当后面会带上命令时, 就需要明确告诉程序执行完后 "不要退出"
-                "-c", // 可省略
-                "clear;", // 注意分号不能省略
-                "echo hello;"
-                /* ... chcp 65001 */
-            ]
-        },
-    },
-
-
-
     // * ************************************************************** * \\
     // * ************************************************************** * \\
     // * ************************************************************** * \\
@@ -170,13 +132,16 @@
             比如 shell 语言，它的语言类型是 `shellscript`，在配置时，也必须写成 `shellscript`，不然不生效
             通过该方式运行时如果报错，可能是因为 sh 脚本开头指定了 #!/bin/bash 。因为 window 系统下没有 /bin/bash。
          */
-        "shellscript": "bash $filename'"
+        "shellscript": "bash $fileName"
     },
 
 
 
     // Run on Save 插件
     "emeraldwalk.runonsave": {
+        // 通过修改 vscode 的默认终端是不生效的，需要在这里指定 shell
+        "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "autoClearConsole": true,
         "commands": [
             {
                 // 输出内容是在 OUTPUT 的子窗口　—— RUN ON SAVE。 更多配置请查看 https://github.com/emeraldwalk/vscode-runonsave
