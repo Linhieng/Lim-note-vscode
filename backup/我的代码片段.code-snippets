@@ -1,46 +1,67 @@
 {
-	// 前端
-	"箭头函数": {
-		"scope": "javascript,typescript,vue",
-		"prefix": "jt",
-		"body": [
-			"($1) => {$2}"
-		],
-	},
-	"初始化 HTML 文件": {
-		"scope": "html",
-		"prefix": [ "!", "！" ],
-		"body": [
-			"<!DOCTYPE html>",
-			"<html lang='zh-CN'>",
-			"",
-			"<head>",
-			"  <meta charset='UTF-8'>",
-			"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-			"  <title>${1:Document}</title>",
-			"</head>",
-			"",
-			"<body>",
-			"  $2",
-			"</body>",
-			"",
-			"</html>"
-		],
-		"description": "默认语言为中文的模板"
-	},
+    // 前端
+    "箭头函数": {
+        "scope": "javascript,typescript,vue",
+        "prefix": "jt",
+        "body": [
+            "($1) => {$2}"
+        ],
+    },
+    "初始化 HTML 文件": {
+        "scope": "html",
+        "prefix": [ "!", "！" ],
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang='zh-CN'>",
+            "",
+            "<head>",
+            "  <meta charset='UTF-8'>",
+            "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+            "  <title>${1:Document}</title>",
+            "</head>",
+            "",
+            "<body>",
+            "  $2",
+            "</body>",
+            "",
+            "</html>"
+        ],
+        "description": "默认语言为中文的模板"
+    },
 
-	// markdown
-	"可缩进空格": {
-		"scope": "markdown",
-		"prefix": [ "  ", "kg", "empty", "emsp" ],
-		"body": [
-			"&emsp;&emsp;"
-		],
-		"description": "某些情况下想要使用空格缩进，但由不想让 md 文件忽略这些空格时，可以使用 emsp 空格"
-	},
-	"标题": {
-		"scope": "markdown",
-		"prefix": [ "##" ],
-		"body": "## 🍕 $0"
-	},
+    // markdown
+    "可缩进空格": {
+        "scope": "markdown",
+        "prefix": [ "  ", "kg", "empty", "emsp" ],
+        "body": [
+            "&emsp;&emsp;"
+        ],
+        "description": "某些情况下想要使用空格缩进，但由不想让 md 文件忽略这些空格时，可以使用 emsp 空格"
+    },
+    "标题": {
+        "scope": "markdown",
+        "prefix": [ "##" ],
+        "body": "## 🍕 $0"
+    },
+    "markdown 模版": {
+        "scope": "markdown",
+        "prefix": ["mb", "!", "！"],
+        "body": [
+            "<style>",
+            "    h2::before {",
+            "        content: '🍕 '",
+            "    }",
+            "    h3::before {",
+            "        content: '🍕🍕 '",
+            "    }",
+            "    ul ul {",
+            "        list-style: none;",
+            "    }",
+            "    ul ul ul {",
+            "        list-style: circle;",
+            "    }",
+            "</style>",
+            "$1",
+        ]
+    }
 }
