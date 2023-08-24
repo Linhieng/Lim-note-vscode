@@ -43,25 +43,4 @@
         "prefix": [ "##" ],
         "body": "## 🍕 $0"
     },
-    "markdown 模版": {
-        "scope": "markdown",
-        "prefix": ["mb", "!", "！"],
-        "body": [
-            "<style>",
-            "    h2::before {",
-            "        content: '🍕 '",
-            "    }",
-            "    h3::before {",
-            "        content: '🍕🍕 '",
-            "    }",
-            "    ul ul {",
-            "        list-style: none;",
-            "    }",
-            "    ul ul ul {",
-            "        list-style: circle;",
-            "    }",
-            "</style>",
-            "$1",
-        ]
-    }
 }

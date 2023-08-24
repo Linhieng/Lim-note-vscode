@@ -5,12 +5,17 @@
 .markdown-preview.markdown-preview {
   .font__special_chinese_punctuation("微软雅黑");
 
+  /* TODO：
+    [ ] 待办事项样式
+  */
   li,
   pre[data-info="txt"],
   p {
-    font-size  : 1.5rem;
-    line-height: 2.3rem;
-    margin     : 14px 0;
+    font-size    : 1.5rem;
+    line-height  : 2.3rem;
+    margin       : 14px 0;
+    word-break   : break-all;
+    overflow-wrap: break-word;
   }
 
   a {
@@ -26,18 +31,24 @@
   }
 
   code {
-    // 参考自掘金
-    word-break      : break-word;
+    word-break      : break-all;
     border-radius   : 2px;
     overflow-x      : auto;
     background-color: #fff5f5;
     color           : #ff502c;
-    font-size       : .87em;
+    font-size       : 1.3rem;
     padding         : .065em .4em;
+    border          : 0.1rem solid lightpink;
+    border-radius   : 0.4rem;
+  }
+
+  pre::-webkit-scrollbar {
+    height: 4px;
   }
 
   pre code {
     word-break      : unset;
+    border          : unset;
     border-radius   : unset;
     overflow-x      : unset;
     background-color: unset;
@@ -102,16 +113,11 @@
   td,
   th,
   a,
-  pre[data-info="txt"],
-  code {
+  pre[data-info="txt"] {
     font-family: "__@{font-chinese}",
     @font-english,
     @font-chinese,
     serif;
-  }
-
-  pre code {
-    font-family: unset;
   }
 }
 

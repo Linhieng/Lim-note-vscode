@@ -67,6 +67,7 @@
 
     //
     "code-runner.saveFileBeforeRun": true,
+    "markdown-preview-enhanced.previewTheme": "medium.css",
 
     "files.exclude": {
         "desktop.ini": true,
@@ -79,6 +80,7 @@
         "*.csv": "gc-excelviewer-csv-editor"
     },
     "[markdown]": {
+        "editor.wrappingIndent": "deepIndent",
         "editor.snippetSuggestions": "top",
         "editor.suggest.matchOnWordStartOnly": true,
         "editor.quickSuggestions": {
@@ -86,9 +88,25 @@
         },
     },
     "[scss]": {
-        "editor.defaultFormatter": "MikeBovenlander.formate"
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "MikeBovenlander.formate",
+        "editor.formatOnSave": true
+    },
+    "[less]": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "MikeBovenlander.formate",
+        "editor.formatOnSave": true
     },
     "[css]": {
-        "editor.defaultFormatter": "MikeBovenlander.formate"
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "MikeBovenlander.formate",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
     },
 }
