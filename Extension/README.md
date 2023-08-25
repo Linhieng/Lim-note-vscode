@@ -36,6 +36,19 @@ christian-kohler.path-intellisense | Path Intellisense    | 可以提示, 但是
 sachinb94.css-tree                 | css tree             | 选中 HTML 时自动生成 css 嵌套树， 有点鸡肋
 formulahendry.auto-close-tag       | Auto Close Tag       | vscode 已经提供了标签自闭合
 
+extension Identifier        | extension name                           | 简单说明
+----------------------------|------------------------------------------|-------------------------------------
+ms-vscode-remote.remote-wsl | WSL                                      | 允许 vscode 打开 Window  中的内置 Linux 系统文件
+remisa.shellman             | shellman                                 | 提供 shell 脚本代码片段
+timonwong.shellcheck        | shellcheck                               | shell 脚本检查
+esbenp.prettier-vscode      | Prettier - Code formatter                |
+gimly81.matlab              | Matlab Unofficial                        |
+redhat.java                 | Language Support for Java(TM) by Red Hat |
+pthorsson.vscode-jsp        | Java Server Pages (JSP)                  | 不再维护（支持jsp语法高亮）
+lixquid.calculator          | Calculator                               | 选中文本直接计算出结果值
+ms-python.black-formatter   | Black Formatter                          |
+ms-python.isort             | isort                                    |
+
 ## 🍕 某些插件的说明
 
 ### Auto Rename Tag
