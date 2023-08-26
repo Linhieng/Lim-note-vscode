@@ -1,11 +1,12 @@
 {
     // 前端
-    "箭头函数": {
+    "请使用 anfn 代替 jt": {
         "scope": "javascript,typescript,vue",
         "prefix": "jt",
         "body": [
             "($1) => {$2}"
         ],
+        "description": "请使用插件提供的 anfn 代码片段，而不是自定义代码片段！"
     },
     "初始化 HTML 文件": {
         "scope": "html",
@@ -37,10 +38,5 @@
             "&emsp;&emsp;"
         ],
         "description": "某些情况下想要使用空格缩进，但由不想让 md 文件忽略这些空格时，可以使用 emsp 空格"
-    },
-    "标题": {
-        "scope": "markdown",
-        "prefix": [ "##" ],
-        "body": "## 🍕 $0"
     },
 }

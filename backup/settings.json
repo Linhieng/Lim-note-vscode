@@ -1,3 +1,4 @@
+// spell-checker:ignoreRegExp /(?<!\/.*)(?<="[^"]+"): .*/
 {
     //
     "http.proxy": "http://127.0.0.1:7890",
@@ -59,15 +60,18 @@
     "output.smartScroll.enabled": false,
     "debug.console.wordWrap": false,
 
-    //
+    // 窗口样式
     "window.menuBarVisibility": "compact",
     "window.commandCenter": false,
     "window.newWindowDimensions": "maximized",
     "window.openFoldersInNewWindow": "on",
 
-    //
+    // 扩展配置
+    "extensions.ignoreRecommendations": true,
     "code-runner.saveFileBeforeRun": true,
     "markdown-preview-enhanced.previewTheme": "medium.css",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
 
     "files.exclude": {
         "desktop.ini": true,
@@ -77,7 +81,8 @@
         "editor.findMatchBackground": "#ffffff11",
     },
     "workbench.editorAssociations": {
-        "*.csv": "gc-excelviewer-csv-editor"
+        "*.csv": "gc-excelviewer-csv-editor",
+        "git-rebase-todo": "default"
     },
     "[markdown]": {
         "editor.wrappingIndent": "deepIndent",
@@ -86,6 +91,7 @@
         "editor.quickSuggestions": {
             "other": "on"
         },
+        "editor.defaultFormatter": "darkriszty.markdown-table-prettify",
     },
     "[scss]": {
         "editor.tabSize": 2,
@@ -108,5 +114,18 @@
     "[javascript]": {
         "editor.tabSize": 2,
         "editor.detectIndentation": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "cSpell.customDictionaries": {
+        "custom-dictionary-user": {
+            "name": "custom-dictionary-user",
+            "path": "~/.cspell/custom-dictionary-user.txt",
+            "addWords": true,
+            "scope": "user"
+        }
+    },
+    "task.allowAutomaticTasks": "on",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 }

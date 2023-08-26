@@ -5,9 +5,6 @@
 .markdown-preview.markdown-preview {
   .font__special_chinese_punctuation("微软雅黑");
 
-  /* TODO：
-    [ ] 待办事项样式
-  */
   li,
   pre[data-info="txt"],
   p {
@@ -18,10 +15,22 @@
     overflow-wrap: break-word;
   }
 
+  li input[type="checkbox"] {
+    width : 15px;
+    height: 15px;
+    margin: 0px 2px;
+
+    &::before {
+      content         : '';
+      background-color: transparent;
+    }
+
+  }
+
   a {
     text-decoration: none;
     color          : skyblue;
-    padding        : 0 2px 1px 2px;
+    padding        : 0 2px 4px 2px;
     box-shadow     : 0 2px 0 0 skyblue;
 
     &:hover {
@@ -37,7 +46,7 @@
     background-color: #fff5f5;
     color           : #ff502c;
     font-size       : 1.3rem;
-    padding         : .065em .4em;
+    padding         : 0 2px;
     border          : 0.1rem solid lightpink;
     border-radius   : 0.4rem;
   }
@@ -53,8 +62,12 @@
     overflow-x      : unset;
     background-color: unset;
     color           : unset;
-    font-size       : unset;
     padding         : unset;
+  }
+
+  pre {
+    // 不知为啥，网页端上的默认样式居然设置为 0.85em !important。所以这里只能通过 !important 来覆盖它。
+    font-size: 1.4rem !important;
   }
 
   blockquote {
@@ -113,7 +126,7 @@
   td,
   th,
   a,
-  pre[data-info="txt"] {
+  pre[data-info="text"] {
     font-family: "__@{font-chinese}",
     @font-english,
     @font-chinese,

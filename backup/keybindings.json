@@ -1,3 +1,4 @@
+/* spell-checker:enableCompoundWords */
 /*
 vscode 的快捷键原则:
     尽量使用默认快捷键
@@ -25,7 +26,8 @@ vscode 的快捷键原则:
     {
         // 首字母大写，结合 cameCase 可以实现 PascalCase 风格。
         "key": "ctrl+l ctrl+t",
-        "command": "editor.action.transformToTitlecase"
+        "command": "editor.action.transformToTitlecase",
+        "when": "editorHasSelection"
     },
     {
         // 条件：output 显示。
@@ -118,5 +120,12 @@ vscode 的快捷键原则:
         "key": "shift+alt+f",
         "command": "editor.action.indentationToSpaces",
         "when": "(editorLangId == 'python' || resourceFilename =~ /.*\\.py/i) && !editorHasSelection"
+    },
+    {
+        // 该快捷键用来运行测试，原理是：运行 test 任务组（tasks group）。如果在 test 任务组中只有一个任务，则直接执行该任务。
+        // 添加 when 是为了和首字母大写快捷键区分开。
+        "key": "ctrl+l ctrl+t",
+        "command": "workbench.action.tasks.test",
+        "when": "!editorHasSelection"
     },
 ]
