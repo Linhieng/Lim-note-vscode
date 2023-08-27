@@ -1,6 +1,7 @@
 # 学习使用 vscode
 
 TODO:
+
 - [ ] 重新整理 setting 笔记结构，移除一些太过常见的配置项，或者容易可视化操作的配置项，或者见名思意的配置项。
 - [ ] 思考默认快捷键内容是否显得凌乱？自定义快捷键放置在 backup 中是否容易出错？
 
@@ -10,12 +11,19 @@ TODO:
 
 ## 🍕 文件夹说明
 
-- `setting` 记录 `settings.json` 的配置项
-- `Command Palette` 记录和命令行（通过 Ctrl + Shift + P 打开）有关的内容
-- `Extension` 记录和插件有关的内容，比如好用的插件
-- `Keyboard` 记录快捷键，包括默认快捷键，自定义快捷键放置在 backup 文件夹中。
-- `Snippets` 记录代码片段相关内容。
-- `backup` 文件夹放置个人的配置项，包括 settings, keyboard 和 snippets。该文件夹会定时备份。
+folder          | 简介
+----------------|---
+backup          | vscode 配置的备份。比如 settings, keyboard 和 markdown-preview 样式表
+Command-Palette | vscode 命令行（ctrl+shift+p）
+Debug           | vscode 调试
+Emmet           | vscode 中的 Emmet 语法
+Extension       | vscode 插件
+IntelliSense    | vscode 智能提示
+Keyboard        | vscode 快捷键。自定义快捷键放置在 backup 文件夹中
+Profile         | vscode 的 profile
+setting         | vscode 的 settings.json 文件相关内容
+Snippets        | vscode 代码片段
+Tasks           | vscode 任务（task）
 
 ## 🍕 VScode 没有的功能
 

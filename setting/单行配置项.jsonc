@@ -35,8 +35,7 @@
     "editor.linkedEditing": true,
     // 始终显示折叠按钮
     "editor.showFoldingControls": "always",
-    // 使用基于缩进的折叠策略, 设置这个能够显示末行的花括号, 但是在 md 中 标题 `##` 就无法折叠了, 所以建议在指定文件中配置, 比如 "[c]"
-    "editor.foldingStrategy": "indentation",
+    // "editor.foldingStrategy": "indentation", // 不建议，函数将变得无法折叠。
     // 滚动时, 将嵌套的当前范围在顶部粘滞显示. 比如滚动时, 当前所在函数的首行会一直显示在顶部, 如果该函数是嵌套在另外一个函数内的, 则这两个函数都会显示在顶部. 当嵌套的太多, 顶部也会被占用太多行, 此时可以使用 editor.stickyScroll.maxLineCount 指定最大行数.
     "editor.stickyScroll.enabled": false,
     // 对于非 ASCII 字符如何显示高亮。 默认是当非 ASCII 符号与 ASCII 符号相连时给出高亮提示。

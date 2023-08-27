@@ -45,12 +45,24 @@
     },
 
 
+    // 覆盖当前所选颜色主题的颜色。
     "workbench.colorCustomizations": {
+
         /*
             editor.findMatch* 配置 ctrl+f 搜索时，选中项的样式。 默认的样式有点反光。
          */
+        // 搜索时，当前选中的匹配项的边框颜色
         "editor.findMatchBorder": "#FFFFFF",
+        // 搜索时，当前选中的匹配项的背景颜色
         "editor.findMatchBackground": "#ffffff11",
+
+        // 匹配时（高亮），与当前所选项内容相同的匹配项的边框颜色，
+        "editor.selectionHighlightBorder": "#ff0000",
+        // 匹配时（高亮），与当前所选项内容相同的匹配项的背景颜色，
+        "editor.selectionHighlightBackground": "#ff000099",
+
+        // 鼠标选择时，当前所选中的内容的背景颜色。
+        "editor.selectionBackground": "#ff00ff99",
     },
 
 
@@ -76,10 +88,16 @@
     "[vue]": {
         // 保存时执行的行为
         "editor.codeActionsOnSave": {
-            // 保存时, 自动执行 eslint 插件的 "修复全部" 功能, 但如何找到 "source.fixAll.eslint" 不清楚
+            // 保存时, 自动执行 eslint 插件的 "修复全部" 功能, ~~但如何找到 "source.fixAll.eslint" 不清楚~~ 这可能是 eslint 插件提供的功能。
             "source.fixAll.eslint": true,
             "source.fixAll.stylelint": true
         }
+    },
+    // 添加这个仅仅是移动旧笔记。具体配置什么作用，以前又为什么要这么设置还不清楚。所以先留着，后面有时间再整理。
+    "[c]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true,
     },
 
     "[markdown]": {
