@@ -4,6 +4,12 @@
     "http.proxy": "http://127.0.0.1:7890",
 
     //
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 1.5,
+    "terminal.integrated.tabs.showActions": "always",
+
+    //
     "files.trimTrailingWhitespace": true,
     "files.autoGuessEncoding": true,
 
@@ -21,6 +27,7 @@
     // 光标
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorWidth": 3,
 
     // 字体
     "editor.fontSize": 16,
@@ -72,6 +79,7 @@
     "markdown-preview-enhanced.previewTheme": "medium.css",
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
+    "cSpell.allowCompoundWords": true,
 
     "files.exclude": {
         "desktop.ini": true,
@@ -84,6 +92,28 @@
         "*.csv": "gc-excelviewer-csv-editor",
         "git-rebase-todo": "default"
     },
+
+
+    "[css][markdown][json][jsonc]": {
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false,
+    },
+    "[scss][less][javascript]": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+    },
+    "[scss][less][css]": {
+        "editor.defaultFormatter": "MikeBovenlander.formate",
+        "editor.formatOnSave": true,
+    },
+    "[javascript][typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[json][jsonc]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
     "[markdown]": {
         "editor.wrappingIndent": "deepIndent",
         "editor.snippetSuggestions": "top",
@@ -93,29 +123,8 @@
         },
         "editor.defaultFormatter": "darkriszty.markdown-table-prettify",
     },
-    "[scss]": {
-        "editor.tabSize": 2,
-        "editor.detectIndentation": false,
-        "editor.defaultFormatter": "MikeBovenlander.formate",
-        "editor.formatOnSave": true
-    },
-    "[less]": {
-        "editor.tabSize": 2,
-        "editor.detectIndentation": false,
-        "editor.defaultFormatter": "MikeBovenlander.formate",
-        "editor.formatOnSave": true
-    },
-    "[css]": {
-        "editor.tabSize": 4,
-        "editor.detectIndentation": false,
-        "editor.defaultFormatter": "MikeBovenlander.formate",
-        "editor.formatOnSave": true
-    },
-    "[javascript]": {
-        "editor.tabSize": 2,
-        "editor.detectIndentation": false,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
+
+
     "cSpell.customDictionaries": {
         "custom-dictionary-user": {
             "name": "custom-dictionary-user",
@@ -124,8 +133,7 @@
             "scope": "user"
         }
     },
-    "task.allowAutomaticTasks": "on",
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    "markdownlint.config": {
+        "MD007": { "indent": 4 },
     },
 }

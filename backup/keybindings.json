@@ -1,4 +1,3 @@
-/* spell-checker:enableCompoundWords */
 /*
 vscode 的快捷键原则:
     尽量使用默认快捷键
@@ -122,10 +121,11 @@ vscode 的快捷键原则:
         "when": "(editorLangId == 'python' || resourceFilename =~ /.*\\.py/i) && !editorHasSelection"
     },
     {
-        // 该快捷键用来运行测试，原理是：运行 test 任务组（tasks group）。如果在 test 任务组中只有一个任务，则直接执行该任务。
-        // 添加 when 是为了和首字母大写快捷键区分开。
+        // 该快捷键用来运行 jest 测试
+        // 添加 when 是为了和首字母大写快捷键区分开，同时确保只在 *.test.js 文件中执行，后续可能还会添加 .(js|ts|jsx) 之类的。
         "key": "ctrl+l ctrl+t",
-        "command": "workbench.action.tasks.test",
-        "when": "!editorHasSelection"
+        "command": "workbench.action.tasks.runTask",
+        "when": "!editorHasSelection && resourceFilename =~ /.*test\\.(js)/",
+        "args": "jest single file"
     },
 ]
