@@ -1,4 +1,5 @@
 // spell-checker:ignoreRegExp /(?<!\/.*)(?<="[^"]+"): .*/
+// prettier-ignore
 {
     //
     "http.proxy": "http://127.0.0.1:7890",
@@ -23,6 +24,7 @@
     // 更改习惯中 "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.suggest.matchOnWordStartOnly": false,
     // 似乎没什么效果，观察中 "editor.suggest.localityBonus": true,
+    "editor.suggest.preview": true,
 
     // 光标
     "editor.cursorBlinking": "expand",
@@ -40,6 +42,7 @@
     "editor.minimap.enabled": false,
     "editor.showFoldingControls": "always",
     "editor.accessibilitySupport": "off",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?（），。？！",
 
     // 缩进
     // "editor.tabSize": 4,
@@ -106,12 +109,12 @@
         "editor.defaultFormatter": "MikeBovenlander.formate",
         "editor.formatOnSave": true,
     },
-    "[javascript][typescript]": {
+    "[javascript][typescript][json][jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
     },
     "[json][jsonc]": {
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "vscode.json-language-features"
+        // "editor.suggest.insertMode": "replace",
     },
 
     "[markdown]": {
@@ -122,18 +125,5 @@
             "other": "on"
         },
         "editor.defaultFormatter": "darkriszty.markdown-table-prettify",
-    },
-
-
-    "cSpell.customDictionaries": {
-        "custom-dictionary-user": {
-            "name": "custom-dictionary-user",
-            "path": "~/.cspell/custom-dictionary-user.txt",
-            "addWords": true,
-            "scope": "user"
-        }
-    },
-    "markdownlint.config": {
-        "MD007": { "indent": 4 },
     },
 }
