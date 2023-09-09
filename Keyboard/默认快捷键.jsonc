@@ -258,6 +258,12 @@
         "key": "ctrl+shift+n",
         "command": "workbench.action.newWindow"
     },
+    {
+        // 快速跳到配对的括号，比如 () [] {}
+        "key": "ctrl+shift+\\",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    }
 
 
     // * ************************************************************** * \\
