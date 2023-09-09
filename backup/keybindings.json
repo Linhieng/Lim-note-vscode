@@ -1,3 +1,4 @@
+// prettier-ignore
 /*
 vscode 的快捷键原则:
     尽量使用默认快捷键
@@ -125,7 +126,7 @@ vscode 的快捷键原则:
         // 添加 when 是为了和首字母大写快捷键区分开，同时确保只在 *.test.js 文件中执行，后续可能还会添加 .(js|ts|jsx) 之类的。
         "key": "ctrl+l ctrl+t",
         "command": "workbench.action.tasks.runTask",
-        "when": "!editorHasSelection && resourceFilename =~ /.*test\\.(js)/",
+        "when": "!editorHasSelection && resourceFilename =~ /.*test\\.(js|ts)/",
         "args": "jest single file"
     },
 ]

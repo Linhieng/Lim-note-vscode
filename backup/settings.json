@@ -9,6 +9,10 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.tabs.showActions": "always",
+    "terminal.integrated.hideOnStartup": "always",
+
+    //
+    "diffEditor.experimental.showMoves": true,
 
     //
     "files.trimTrailingWhitespace": true,
@@ -25,6 +29,7 @@
     "editor.suggest.matchOnWordStartOnly": false,
     // 似乎没什么效果，观察中 "editor.suggest.localityBonus": true,
     "editor.suggest.preview": true,
+    "editor.suggest.insertMode": "replace",
 
     // 光标
     "editor.cursorBlinking": "expand",
@@ -42,7 +47,7 @@
     "editor.minimap.enabled": false,
     "editor.showFoldingControls": "always",
     "editor.accessibilitySupport": "off",
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?（），。？！；：",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?（），。？！；：、",
 
     // 缩进
     // "editor.tabSize": 4,
@@ -57,11 +62,15 @@
     "workbench.editor.wrapTabs": true,
 
     // 格式化
+    "prettier.tabWidth": 4,
     "json.format.keepLines": true,
     "html.format.wrapAttributes": "preserve-aligned",
     "javascript.format.semicolons": "remove", "typescript.format.semicolons": "remove",
     "javascript.format.insertSpaceAfterConstructor": true, "typescript.format.insertSpaceAfterConstructor": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true, "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+
+    // language
+    // "javascript.inlayHints.parameterNames.enabled": "all", "typescript.inlayHints.parameterNames.enabled": "all",
 
     //
     "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
@@ -80,10 +89,15 @@
     "extensions.ignoreRecommendations": true,
     "code-runner.saveFileBeforeRun": true,
     "markdown-preview-enhanced.previewTheme": "medium.css",
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.enabled": false,
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "`en-GB,en-US`",
+
+    // git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+
 
     "files.exclude": {
         "desktop.ini": true,
@@ -94,7 +108,7 @@
     },
     "workbench.editorAssociations": {
         "*.csv": "gc-excelviewer-csv-editor",
-        "git-rebase-todo": "default"
+        "git-rebase-todo": "default",
     },
 
 
@@ -114,10 +128,7 @@
         "editor.tabSize": 4,
         "editor.detectIndentation": false,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[json][jsonc]": {
-        // "editor.suggest.insertMode": "replace",
+        "editor.formatOnSave": true,
     },
 
     "[markdown]": {
@@ -125,13 +136,17 @@
         "editor.snippetSuggestions": "top",
         "editor.suggest.matchOnWordStartOnly": true,
         "editor.quickSuggestions": {
-            "other": "on"
+            "other": "on",
         },
         "editor.defaultFormatter": "darkriszty.markdown-table-prettify",
-        // "editor.fontFamily": "'全角引号和破折号', 'Basic Latin AW500', 'sarasa fixed sc'",
+        // 具体的字体设置，只在需要表格对齐的工作区中配置。等宽中文字体为 1000 的有 'Source Han Sans HW SC' 和 'sarasa fixed sc'
+        // 此外，配置时建议字体大小为 20
         // "editor.fontFamily": "'Basic Latin AW500', 'sarasa fixed sc'",
-        "editor.fontFamily": "'Basic Latin AW500', 'Source Han Sans HW SC'",
-        "editor.fontSize": 20
     },
-    "git.autofetch": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    }
 }
