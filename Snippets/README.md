@@ -12,29 +12,24 @@
 
 - `description`：描述信息
 
+## [vscode 代码片段中提供的变量](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables)
+
+使用方法：`$name` 或者 `${name:default_value}`。
+
+example              | 说明
+---------------------|-------------
+`$TM_FILENAME`       | 当前文件名
+`$TM_FILENAME_BASE`  | 当前文件名，不含后缀
+`$TM_FILEPATH`       | 当前文件的完整路径
+`$RELATIVE_FILEPATH` | 当前文件相对工作区的路径
+`$CURRENT_YEAR`      | 年，比如 2023
+`$CURRENT_MONTH`     | 月，比如 09
+`$CURRENT_DATE`      | 日，比如 16
+`$CURRENT_HOUR`      | 点，比如 10
+`$CURRENT_MINUTE`    | 分，比如 27
+`$CURRENT_SECOND`    | 秒，比如 14
+
 ## 旧笔记搬运
-
-[vscode 代码片段中提供的变量](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables)
-
-name             | 说明
------------------|----------
-`CURRENT_YEAR`   | 比如 2022 年
-`CURRENT_MONTH`  | 比如 08 月
-`CURRENT_DATE`   | 比如 12 日
-`CURRENT_HOUR`   | 比如 09 点
-`CURRENT_MINUTE` | 比如 49 分
-
-使用方法：`$name` 或者 `${name:default_value}`。下面是案例（file 代表 the current opened file）
-
-example                      | 说明
------------------------------|-------------------------------
-`${file}`                    | 文件所在绝对路径+文件名+后缀
-`${fileBasename}`            | 文件名+后缀
-`${fileBasenameNoExtension}` | 文件名
-`${fileExtname}`             | 后缀
-`${fileDirname}`             | 文件所在绝对路径
-`${workspaceFolder}`         | 项目文件夹在 VS Code 中打开的路径
-`${relativeFile}`            | 相对于 `${workspaceFolder}` 的文件路径
 
 可以在项目中创建 `.vscode/.code-snippets` 文件，作为该目录中的特定代码片段。
 或者运行 snippet configure user snippets 创建全局、指定语言的代码片段。
