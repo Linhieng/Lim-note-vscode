@@ -1,152 +1,98 @@
-// spell-checker:ignoreRegExp /(?<!\/.*)(?<="[^"]+"): .*/
-// prettier-ignore
 {
-    //
     "http.proxy": "http://127.0.0.1:7890",
 
-    //
-    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 32,
+    "editor.fontFamily": "Hack-ASCII, 微软雅黑",
+
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorWidth": 3,
+
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.suggest.preview": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.showWords": false,
+
+    "editor.emptySelectionClipboard": false,
+    "editor.dragAndDrop": false,
+    "editor.showFoldingControls": "always",
+    "editor.accessibilitySupport": "off",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?（），。？！；：、",
+    "editor.renderWhitespace": "boundary",
+    "editor.stickyTabStops": true,
+
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.tabs.showActions": "always",
     "terminal.integrated.hideOnStartup": "always",
 
-    //
-    "diffEditor.experimental.showMoves": true,
-
-    //
-    "files.trimTrailingWhitespace": true,
-    "files.autoGuessEncoding": true,
-
-    //
-    "explorer.sortOrder": "type",
-    "explorer.compactFolders": false,
-
-    // suggest
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    // 似乎不适合全局使用 "editor.snippetSuggestions": "top",
-    // 更改习惯中 "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.suggest.matchOnWordStartOnly": false,
-    // 似乎没什么效果，观察中 "editor.suggest.localityBonus": true,
-    "editor.suggest.preview": true,
-    "editor.suggest.insertMode": "replace",
-
-    // 光标
-    "editor.cursorBlinking": "expand",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorWidth": 3,
-
-    // 字体
-    "editor.fontSize": 16,
-    "editor.lineHeight": 32,
-    "editor.fontFamily": "Hack-ASCII, 微软雅黑",
-
-    //
-    "editor.emptySelectionClipboard": false,
-    "editor.dragAndDrop": false,
-    "editor.minimap.enabled": false,
-    "editor.showFoldingControls": "always",
-    "editor.accessibilitySupport": "off",
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?（），。？！；：、",
-
-    // 缩进
-    // "editor.tabSize": 4,
-    // "editor.insertSpaces": true,
-    // "editor.detectIndentation": true,
-    "editor.renderWhitespace": "boundary",
-    // "editor.useTabStops": true,
-    "editor.stickyTabStops": true,
-
-    // workbench。 tab 指的是选项卡
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.wrapTabs": true,
-
-    // 格式化
-    "prettier.tabWidth": 4,
-    "json.format.keepLines": true,
-    "html.format.wrapAttributes": "preserve-aligned",
-    "javascript.format.semicolons": "remove", "typescript.format.semicolons": "remove",
-    "javascript.format.insertSpaceAfterConstructor": true, "typescript.format.insertSpaceAfterConstructor": true,
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": true, "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
-
-    // language
-    // "javascript.inlayHints.parameterNames.enabled": "all", "typescript.inlayHints.parameterNames.enabled": "all",
-
-    //
-    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
-    "notebook.cellToolbarVisibility": "hover",
     "workbench.iconTheme": "material-icon-theme",
+
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+
+    "window.openFoldersInNewWindow": "on",
+    "window.newWindowDimensions": "maximized",
+
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+    "files.trimTrailingWhitespace": true,
+    "explorer.sortOrder": "type",
     "output.smartScroll.enabled": false,
     "debug.console.wordWrap": false,
-
-    // 窗口样式
-    "window.menuBarVisibility": "compact",
-    "window.commandCenter": false,
-    "window.newWindowDimensions": "maximized",
-    "window.openFoldersInNewWindow": "on",
-
-    // 扩展配置
     "extensions.ignoreRecommendations": true,
-    "code-runner.saveFileBeforeRun": true,
-    "markdown-preview-enhanced.previewTheme": "medium.css",
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+
     "cSpell.allowCompoundWords": true,
     "cSpell.language": "`en-GB,en-US`",
 
-    // git
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.enabled": false,
-
-
-    "files.exclude": {
-        "desktop.ini": true,
-    },
-    "workbench.colorCustomizations": {
-        "editor.findMatchBorder": "#ffffff99",
-        "editor.findMatchBackground": "#ffffff11",
-    },
-    "workbench.editorAssociations": {
-        "*.csv": "gc-excelviewer-csv-editor",
-        "git-rebase-todo": "default",
+    "code-runner.saveFileBeforeRun": true,
+    "markdown-preview-enhanced.previewTheme": "medium.css",
+    "markdownlint.config": {
+        "MD007": false
     },
 
+    ////////////////////////////////////////////////////////////////////////////////
 
-    "[css][markdown]": {
+    "[javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact][scss][less][css]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css][markdown][javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact]": {
         "editor.tabSize": 4,
-        "editor.detectIndentation": false,
+        "editor.detectIndentation": false
     },
-    "[scss][less][javascript]": {
+    "[scss][less]": {
         "editor.tabSize": 2,
-        "editor.detectIndentation": false,
+        "editor.detectIndentation": false
     },
-    "[scss][less][css]": {
-        "editor.defaultFormatter": "MikeBovenlander.formate",
-        "editor.formatOnSave": true,
-    },
-    "[javascript][typescript][json][jsonc]": {
-        "editor.tabSize": 4,
-        "editor.detectIndentation": false,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-    },
+
+    ////////////////////////////////////////////////////////////////////////////////
 
     "[markdown]": {
-        "editor.wrappingIndent": "deepIndent",
-        "editor.snippetSuggestions": "top",
-        "editor.suggest.matchOnWordStartOnly": true,
-        "editor.quickSuggestions": {
-            "other": "on",
-        },
         "editor.defaultFormatter": "darkriszty.markdown-table-prettify",
-        // 具体的字体设置，只在需要表格对齐的工作区中配置。等宽中文字体为 1000 的有 'Source Han Sans HW SC' 和 'sarasa fixed sc'
-        // 此外，配置时建议字体大小为 20
-        // "editor.fontFamily": "'Basic Latin AW500', 'sarasa fixed sc'",
+        "editor.formatOnSave": true,
+        "editor.wrappingIndent": "deepIndent",
+        // "editor.snippetSuggestions": "top",
+        // "editor.suggest.matchOnWordStartOnly": true,
+        "editor.quickSuggestions": {
+            "other": "on"
+        }
     },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "workbench.colorCustomizations": {
+        "editor.findMatchBorder": "#ffffff99",
+        "editor.findMatchBackground": "#ffffff11"
     }
 }

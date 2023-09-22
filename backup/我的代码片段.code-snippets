@@ -1,5 +1,19 @@
 // prettier-ignore
 {
+    // 全局变量
+    "time": {
+        "prefix": "sj",
+        "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND"
+    },
+    "file basename": {
+        "prefix": "fileBasename",
+        "body": "$TM_FILENAME",
+    },
+    "file basename no extension": {
+        "prefix": "fileBasenameNoExtension",
+        "body": "$TM_FILENAME_BASE",
+    },
+
     // 前端
     "请使用 anfn 代替 jt": {
         "scope": "javascript,typescript,vue",
