@@ -1,5 +1,10 @@
 {
     "files.exclude": {
         "**/*.lnk": true
-    }
+    },
+    "cSpell.words": [
+        "Linhi",
+        "Linhieng",
+        "msedge"
+    ]
 }

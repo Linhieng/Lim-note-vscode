@@ -18,7 +18,7 @@ Extensions         | 目前只配置了这个
 只将我经常使用的扩展和每个项目都会用到的扩展列入全局扩展，这意味着这些扩展不会专门添加到项目的 `.vscode/extensions.json`。
 
 Extensions ID                         | 说明
---------------------------------------|---------------------------------------
+--------------------------------------|--------------------------------------------------
 pkief.material-icon-theme             | Material Icon Theme
 darkriszty.markdown-table-prettify    | Markdown Table Prettifier
 shd101wyy.markdown-preview-enhanced   | Markdown Preview Enhanced

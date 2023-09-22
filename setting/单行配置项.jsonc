@@ -188,5 +188,5 @@
 
 
     // 允许 eslint 作为格式化选项 (没用过)
-    "eslint.format.enable": true,
+    "eslint.format.enable": true
 }

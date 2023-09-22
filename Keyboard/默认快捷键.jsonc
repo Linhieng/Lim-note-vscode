@@ -1,3 +1,4 @@
+/* spell-checker:ignore pageup */
 // 已经铭记于心的、太过于常见的不写，比如最常见的 ctrl+a/z/x/c/v//y/f/h/w/t/...... 这些都是非常常见的。 (小历史，曾经的 ctrl+w 不是 VScode 默认的关闭标签页快捷键)
 // 不过当已经写过的东西变得熟悉后，会放到下面。
 [
@@ -168,7 +169,7 @@
     {
         // 格式化
         "key": "shift+alt+f",
-        "command": "editor.action.formatDocument",
+        "command": "editor.action.formatDocument"
     },
     {
         // 智能选择单词。普通的 ctrl+shift+right 会选中整个单词，比如 CodeEditor 会选中整个。
@@ -263,7 +264,7 @@
         "key": "ctrl+shift+\\",
         "command": "editor.action.jumpToBracket",
         "when": "editorTextFocus"
-    }
+    },
 
 
     // * ************************************************************** * \\
