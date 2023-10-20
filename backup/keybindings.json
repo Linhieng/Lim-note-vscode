@@ -129,4 +129,8 @@ vscode 的快捷键原则:
         "when": "!editorHasSelection && resourceFilename =~ /.*test\\.(js|ts)/",
         "args": "jest single file"
     },
+    {
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
+    },
 ]

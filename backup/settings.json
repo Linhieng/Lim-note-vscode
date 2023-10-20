@@ -12,7 +12,7 @@
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.suggest.preview": true,
     "editor.suggest.insertMode": "replace",
-    "editor.suggest.showWords": false,
+    // "editor.suggest.showWords": false, jsDom 属于 word
 
     "editor.emptySelectionClipboard": false,
     "editor.dragAndDrop": false,
@@ -41,9 +41,13 @@
     "diffEditor.experimental.showMoves": true,
     "diffEditor.hideUnchangedRegions.enabled": true,
 
-    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
-    "files.trimTrailingWhitespace": true,
     "explorer.sortOrder": "type",
+    "explorer.fileNesting.enabled": true,
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
     "output.smartScroll.enabled": false,
     "debug.console.wordWrap": false,
     "extensions.ignoreRecommendations": true,
@@ -64,12 +68,11 @@
     },
 
     ////////////////////////////////////////////////////////////////////////////////
-
-    "[javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact][scss][less][css]": {
+    "[html][javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact][scss][less][css]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[css][markdown][javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact]": {
+    "[css][markdown][javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact][sql]": {
         "editor.tabSize": 4,
         "editor.detectIndentation": false
     },
@@ -94,5 +97,13 @@
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#ffffff99",
         "editor.findMatchBackground": "#ffffff11"
-    }
+    },
+
+    "explorer.fileNesting.patterns": {
+        ".prettierrc": ".prettierignore",
+        ".prettierrc.json": ".prettierignore",
+        "*.mjs": "${capture}.mjs.map, ${capture}.min.mjs",
+        "*.cjs": "${capture}.cjs.map, ${capture}.min.cjs"
+    },
+    "cSpell.userWords": ["Linhieng"]
 }
