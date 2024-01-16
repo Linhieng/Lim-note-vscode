@@ -5,22 +5,23 @@
 extension Identifier                  | extension name                         | 简单说明
 --------------------------------------|----------------------------------------|------------------------------------
 streetsidesoftware.code-spell-checker | Spell Checker                          | 拼写检查
-donjayamanne.githistory               | Git History                            | 查看 Git 历史记录
-kisstkondoros.vscode-gutter-preview   | Image preview                          | 图图片预览
+darkriszty.markdown-table-prettify    | Markdown Table Prettifier              | markdown 表格工具
+shd101wyy.markdown-preview-enhanced   | Markdown Preview Enhanced              | 加强版预览 markdown
 ritwickdey.liveserver                 | Live Server                            | 本地在线服务器
-formulahendry.code-runner             | Code Runner                            | 运行代码
 pkief.material-icon-theme             | Material Icon Theme                    | 文件和文件夹图标
+formulahendry.code-runner             | Code Runner                            | 运行代码
+donjayamanne.githistory               | Git History                            | 查看 Git 历史记录
+
+kisstkondoros.vscode-gutter-preview   | Image preview                          | 图图片预览
 vue.volar                             | Vue Language Features (Volar)          | 开发 Vue
 ms-vscode.cpptools                    | C/C++                                  | 运行 C/C++
 mikebovenlander.formate               | formate: CSS/LESS/SCSS formatter       | 格式化 CSS
 dbaeumer.vscode-eslint                | ESLint                                 | 前端代码格式检查
-darkriszty.markdown-table-prettify    | Markdown Table Prettifier              | markdown 表格工具
 tomoki1207.pdf                        | vscode-pdf                             | vscode 查看 pdf 文件
 formulahendry.auto-rename-tag         | Auto Rename Tag                        | 自动重命名元素开闭标签名
 standard.vscode-standard              | StandardJS - JavaScript Standard Style | 一种 JS 格式规范检查
 mongodb.mongodb-vscode                | MongoDB for VS Code                    | 连接 MongoDB 数据库
 ms-python.python                      | Python                                 | 运行 python
-shd101wyy.markdown-preview-enhanced   | Markdown Preview Enhanced              | 加强版预览 markdown
 grapecity.gc-excelviewer              | Excel Viewer                           | vscode 查看 Excel 文件
 lixquid.calculator                    | Calculator                             | 选择数学表达式直接计算结果
 emeraldwalk.runonsave                 | Run on Save                            | 保存时自动执行命令
