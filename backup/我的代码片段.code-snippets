@@ -19,6 +19,14 @@
     },
 
     // 前端
+    "注释": {
+        "prefix": "/**",
+        "body": [
+            "/**",
+            " * $0",
+            " */",
+        ]
+    },
     "请使用 anfn 代替 jt": {
         "scope": "javascript,typescript,vue",
         "prefix": "jt",

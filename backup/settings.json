@@ -21,6 +21,7 @@
     "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?（），。？！；：、",
     "editor.renderWhitespace": "boundary",
     "editor.stickyTabStops": true,
+    // "editor.formatOnPaste": true,
 
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.5,
@@ -39,7 +40,6 @@
     "window.newWindowDimensions": "maximized",
 
     "diffEditor.experimental.showMoves": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
 
     "explorer.sortOrder": "type",
     "explorer.fileNesting.enabled": true,
@@ -72,11 +72,11 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[css][markdown][javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact][sql]": {
+    "[scss][css][markdown][javascript][typescript][json][jsonc][vue][typescriptreact][javascriptreact][sql]": {
         "editor.tabSize": 4,
         "editor.detectIndentation": false
     },
-    "[scss][less]": {
+    "[less]": {
         "editor.tabSize": 2,
         "editor.detectIndentation": false
     },
@@ -103,7 +103,8 @@
         ".prettierrc": ".prettierignore",
         ".prettierrc.json": ".prettierignore",
         "*.mjs": "${capture}.mjs.map, ${capture}.min.mjs",
-        "*.cjs": "${capture}.cjs.map, ${capture}.min.cjs"
+        "*.cjs": "${capture}.cjs.map, ${capture}.min.cjs",
+        "*.scss": "${capture}.css"
     },
-    "cSpell.userWords": ["Linhieng"]
+    "cSpell.userWords": ["Batis", "echart", "Linhieng"]
 }
