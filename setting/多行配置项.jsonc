@@ -1,5 +1,4 @@
 {
-
     // explorer.autoReveal 配置默认是为 true 的, 也就是所有的文件和文件夹, 当打开他们的时候, 所对应的文件和文件夹将会 reveal 和 selected
     // 在这里 reveal 和 select 的意思是, 对应的文件和文件夹将会自定被聚焦, 举一个例子来说明更加容易理解
     // 当我们在一个 js 文件中, 点击某个包, 它会立即打开对应的源文件, 这个源文件是在 node_modules 文件夹中的
@@ -11,26 +10,22 @@
     // 附上这个方案被提出的 issue: https://github.com/microsoft/vscode/issues/87956
     // 新版本解决的说明: https://code.visualstudio.com/updates/v1_74#_custom-explorer-autoreveal-logic
     "explorer.autoRevealExclude": {
-        "**/node_modules": true,
+        "**/node_modules": true
     },
-
-
 
     // 一些特殊字符，比如全角字符与半角字符在一起时，vscode 会进行高亮。如果不想某些字符高亮，则可以将其添加到这里面
     "editor.unicodeHighlight.allowedCharacters": {
         "（": true,
         "）": true,
-        "，": true,
+        "，": true
     },
-
-
 
     "files.exclude": {
         // 在这里, true 的优先级比 false 的优先级高, 并不会根据精准度进行匹配
         "**/.git": true,
         "**/.vscode": true,
         // 只显示 s 和 m 开头的两个文件夹, 其他的都隐藏
-        "[^src|markdown]*": true,
+        "[^src|markdown]*": true
     },
 
     /*
@@ -44,10 +39,8 @@
         ".eslintrc.cjs": "javascript"
     },
 
-
     // 覆盖当前所选颜色主题的颜色。
     "workbench.colorCustomizations": {
-
         /*
             editor.findMatch* 配置 ctrl+f 搜索时，选中项的样式。 默认的样式有点反光。
          */
@@ -62,16 +55,14 @@
         "editor.selectionHighlightBackground": "#ff000099",
 
         // 鼠标选择时，当前所选中的内容的背景颜色。
-        "editor.selectionBackground": "#ff00ff99",
+        "editor.selectionBackground": "#ff00ff99"
     },
-
 
     // 指定打开文件的方式
     "workbench.editorAssociations": {
         // 使用 Excel Viewer 扩展工具打开 csv 文件
         "*.csv": "gc-excelviewer-csv-editor"
     },
-
 
     // * ************************************************************** * \\
     // * ************************************************************** * \\
@@ -82,8 +73,6 @@
     // * ************************************************************** * \\
     // * ************************************************************** * \\
     // * ************************************************************** * \\
-
-
 
     "[vue]": {
         // 保存时执行的行为
@@ -97,15 +86,44 @@
     "[c]": {
         "editor.wordBasedSuggestions": false,
         "editor.suggest.insertMode": "replace",
-        "editor.semanticHighlighting.enabled": true,
+        "editor.semanticHighlighting.enabled": true
     },
 
     "[markdown]": {
         // 当配置了 snippets 后，会发现 markdown 文件中不会自动显示 suggest。这就是因为下面这个配置
-        "editor.quickSuggestions": { // 配置在哪些上下文中快速显示 suggest, 该配置项需要 "editor.suggestOnTriggerCharacters": true
+        "editor.quickSuggestions": {
+            // 配置在哪些上下文中快速显示 suggest, 该配置项需要 "editor.suggestOnTriggerCharacters": true
             "comments": "off", // 在注释上下文中不开启快速建议。
             "strings": "off", // 在字符串上下文中不开启快速建议
             "other": "on" // 我们大多数情况下需要的是这个。
-        },
+        }
     },
+
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************** extension ************************* * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+    // * ************************************************************** * \\
+
+    // 所有配置项都在下面了，没有更多的配置项了。
+    "emeraldwalk.runonsave": {
+        "shell": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+        "autoClearConsole": true,
+        "commands": [
+            {
+                // 输出内容是在 OUTPUT 的子窗口　—— RUN ON SAVE。下面这个是个输出案例，同时可以查看所以得占位符的值。
+                "match": ".*",
+                "cmd": "echo \" \nworkspaceRoot: \t\t ${workspaceRoot} \nworkspaceFolder: \t ${workspaceFolder} \nfile: \t\t\t\t ${file} \nfileBasename: \t\t ${fileBasename} \nfileDirname: \t\t ${fileDirname} \nfileExtname: \t\t ${fileExtname} \nfileBasenameNoExt: \t ${fileBasenameNoExt} \nrelativeFile: \t\t ${relativeFile} \ncwd: \t\t\t\t ${cwd}\""
+            },
+            {
+                "match": "\\.scss$",
+                "cmd": "md \"${workspaceFolder}\\css\" & sass \"${file}\" > \"${workspaceFolder}\\css\\${fileBasenameNoExt}.css\""
+                // 输出到同级别中 "cmd": "sass \"${file}\" > \"${fileDirname}\\${fileBasenameNoExt}.css\""
+            }
+        ]
+    }
 }
