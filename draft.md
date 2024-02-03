@@ -10,9 +10,10 @@
 
 ```json
 "markdown.editor.pasteUrlAsFormattedLink.enabled": "always",
+// 无论何时，当在 markdown 文档中粘贴一个链接时，都会将其处理为链接格式 —— [text](https://github.com/microsoft/vscode/issues/188736)
 ```
 
-此时不管你想要想要，当你粘贴一个链接时，vscode 都会将其处理为 markdown 链接。当我们只想粘贴一个纯文本链接时，这个功能就会变得适得其所。为此我们可以为纯文本粘贴提供一个新的快捷键：编辑 `keybindings.json` 文件
+但有时候我们只想粘贴为纯文本格式，故我们可以为纯文本粘贴提供一个新的快捷键：编辑 `keybindings.json` 文件
 
 ```json
     {
@@ -26,4 +27,4 @@
     },
 ```
 
-现在，我们就可以使用 `ctrl+l ctrl+v` 粘贴纯文本了。
+现在，当键入 `ctrl+v` 时始终粘贴为链接格式，需要粘贴为纯文本格式时，只需键入 `ctrl+l ctrl+v`。
