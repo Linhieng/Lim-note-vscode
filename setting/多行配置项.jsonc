@@ -109,8 +109,29 @@
     // * ************************************************************** * \\
     // * ************************************************************** * \\
 
-    // 所有配置项都在下面了，没有更多的配置项了。
     "emeraldwalk.runonsave": {
+        /*
+        ${workspaceFolder}: the path of the workspace folder of the saved file
+            vscode 中的当前打开的文件夹路径
+        ${file}: path of saved file
+            触发该插件的文件的完整路径，包括后缀名
+        ${fileBasename}: saved file's basename
+            触发该插件的文件名，包含后缀名
+        ${fileBasenameNoExt}: saved file's basename without extension
+            触发该插件的文件名，不包含后缀名
+        ${fileDirname}: directory name of saved file
+            触发该插件的文件所在目录
+        ${fileExtname}: extension (including .) of saved file
+            触发该插件的文件后缀名
+        ${relativeFile} - the current opened file relative to ${workspaceFolder}
+            触发该插件的文件相对于 ${workspaceFolder} 的（相对）路径
+        ${cwd}: current working directory (this is the working directory that vscode is running in not the project directory)
+            vscode 的运行目录，即 `code.exe` 所在目录
+
+        ${env.Name}
+            环境变量值
+        */
+
         "shell": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
         "autoClearConsole": true,
         "commands": [
@@ -121,8 +142,12 @@
             },
             {
                 "match": "\\.scss$",
-                "cmd": "md \"${workspaceFolder}\\css\" & sass \"${file}\" > \"${workspaceFolder}\\css\\${fileBasenameNoExt}.css\""
-                // 输出到同级别中 "cmd": "sass \"${file}\" > \"${fileDirname}\\${fileBasenameNoExt}.css\""
+
+                // 不输出映射文件
+                "cmd": "sass \"${file}\" \"${fileDirname}\\${fileBasenameNoExt}.css\" --no-source-map "
+
+                // 输出到 css 文件夹
+                // "cmd": "md \"${workspaceFolder}\\css\" -force && sass \"${file}\" \"${workspaceFolder}\\css\\${fileBasenameNoExt}.css\""
             }
         ]
     }
