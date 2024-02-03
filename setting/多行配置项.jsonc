@@ -13,6 +13,15 @@
         "**/node_modules": true
     },
 
+    // 将某些文件折叠起来
+    "explorer.fileNesting.patterns": {
+        ".prettierrc": ".prettierignore",
+        "*.mjs": "${capture}.mjs.map, ${capture}.min.mjs",
+        "*.cjs": "${capture}.cjs.map, ${capture}.min.cjs",
+        "*.scss": "${capture}.css.map, ${capture}.css, ${capture}.min.css",
+        "*.sass": "${capture}.css.map, ${capture}.css, ${capture}.min.css"
+    },
+
     // 一些特殊字符，比如全角字符与半角字符在一起时，vscode 会进行高亮。如果不想某些字符高亮，则可以将其添加到这里面
     "editor.unicodeHighlight.allowedCharacters": {
         "（": true,
@@ -145,8 +154,11 @@
             {
                 "match": "\\.scss$",
 
+                // 常规使用
+                "cmd": "sass \"${file}\" \"${fileDirname}\\${fileBasenameNoExt}.css\""
+
                 // 不输出映射文件
-                "cmd": "sass \"${file}\" \"${fileDirname}\\${fileBasenameNoExt}.css\" --no-source-map "
+                // "cmd": "sass \"${file}\" \"${fileDirname}\\${fileBasenameNoExt}.css\" --no-source-map "
 
                 // 输出到 css 文件夹
                 // "cmd": "md \"${workspaceFolder}\\css\" -force && sass \"${file}\" \"${workspaceFolder}\\css\\${fileBasenameNoExt}.css\""
@@ -157,8 +169,8 @@
     // * ****************** formulahendry.code-runner ****************** * \\
     /*
         缺陷：
-            变量有引号，不适合拼接
-            不支持指定运行 shell
+            某些变量有引号，拼接起来很麻烦
+            不支持指定运行 shell。（可以通过 code-runner.runInTerminal: true 解决）
 
         $workspaceRoot: The path of the folder opened in VS Code
             当前 vscode 打开的文件夹目录，如 d:\CodeProject
