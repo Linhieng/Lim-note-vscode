@@ -28,3 +28,14 @@
 ```
 
 现在，当键入 `ctrl+v` 时始终粘贴为链接格式，需要粘贴为纯文本格式时，只需键入 `ctrl+l ctrl+v`。
+
+### 配置 C 语言运行环境
+
+跟着 [官网教程](https://code.visualstudio.com/docs/cpp/config-mingw) 走就行。
+
+1. 安装 vscode, C/C++ 扩展工具
+2. 安装 [MSYS2](https://www.msys2.org/), 直接默认下一步。
+3. 在 MSYS2 搭建的终端窗口中运行 `pacman -S --needed base-devel mingw-w64-x86_64-toolchain` 命令，该命令将安装我们所需要的所有工具链。安装途中会两次停顿，直接按下会车键即可。
+4. 将 `C:\msys64\mingw64\bin` 添加到系统环境变量中
+5. 打开 Window 终端，运行 `gcc --version`, `g++ --version`, `gdb --version` 命令确保成功。
+6. 在 vscode 中编写 C/C++ 代码运行看看是否成功。
