@@ -111,6 +111,28 @@
     // 只在 debug 时往调试控制台输出时，点击展开才有效果
     "debug.console.wordWrap": false,
 
+    // 自动拉取云端数据
+    "git.autofetch": true,
+    // 设定 autofetch 的周期
+    "git.autofetchPeriod": 180,
+    // 同步(如 push) git 仓库时无需确认
+    "git.confirmSync": false,
+    // 当上级文件夹中存在 git 仓库时，无需提示。
+    "git.openRepositoryInParentFolders": "never",
+    // 智能提交。当没有暂存内容时，自动将未暂存内容添加进暂存区
+    "git.enableSmartCommit": true,
+
+    // 隐藏未变更区域
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+    // 在新窗口打开新项目
+    "window.openFoldersInNewWindow": "on",
+    // 在新窗口打开新项目时最大化窗口
+    "window.newWindowDimensions": "maximized",
+
+    // 打开扩展时，不显示推荐扩展通知
+    "extensions.ignoreRecommendations": true,
+
     ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
@@ -128,9 +150,8 @@
     "C_Cpp.intelliSenseEngineFallback": "disabled",
     "C_Cpp.intelliSenseEngine": "Tag Parser",
 
-    // 允许在 markdown 选中文本粘贴时直接插入链接。 从原本的布尔值变成了现在的 smart, 但暂时还没没有提供快捷键。
-    // smart 的效果是：在代码块内插入链接，或替换原有链接时不会自动转换。
-    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+    // 在 markdown 中粘贴链接文本时自动格式化为文本链接格式
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "always",
 
     // 鼠标 hover 在 notebook 的 cell 上时直接显示工具类，不需要聚焦到 cell 上
     "notebook.cellToolbarVisibility": "hover",
@@ -186,6 +207,23 @@
     ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
 
+    // 指定预览时选用主题
+    "markdown-preview-enhanced.previewTheme": "medium.css",
+
+    // 运行前自动保存文件
+    "code-runner.saveFileBeforeRun": true,
+
+    // 允许 word 混合。如 autofetch
+    "cSpell.allowCompoundWords": true,
+    // 选用英美词典
+    "cSpell.language": "en-GB,en-US",
+
+    // 缩进宽度
+    "prettier.tabWidth": 4,
+    // 省略分号
+    "prettier.semi": false,
+    // 始终使用单引号
+    "prettier.singleQuote": true,
     // 对于超出 printWidth 的段落，进行换行处理。设置为 never 时，将用于不会有 prose
     "prettier.proseWrap": "always"
 }
