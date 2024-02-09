@@ -220,6 +220,15 @@
     ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
 
+    // 时间格式为相对时间
+    "git-graph.date.format": "Relative",
+    // 图形为拓扑结构，详见 https://git-scm.com/docs/git-log#_commit_ordering
+    "git-graph.repository.commits.order": "topo",
+    // 显示头像
+    "git-graph.repository.commits.fetchAvatars": true,
+    // 将非当前所在提交的祖先提交设置为暗色（mute）
+    "git-graph.repository.commits.mute.commitsThatAreNotAncestorsOfHead": true,
+
     // 指定预览时选用主题
     "markdown-preview-enhanced.previewTheme": "medium.css",
 
