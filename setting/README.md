@@ -1,5 +1,11 @@
 # 收集的配置项
 
+[The VS Code interface can roughly be divided into two main concepts: **containers** and **items**. Generally speaking, containers can be considered the larger sections of the VS Code interface that render one or more items:
+](https://code.visualstudio.com/api/ux-guidelines/overview)
+![containers](https://code.visualstudio.com/assets/api/ux-guidelines/examples/architecture-containers.png)
+
+![items](image.png)
+
 说明：
 
 - 容易可视化操作的配置项不会记录，比如 `"window.commandCenter": false` 配置项可以直接在窗口顶部通过鼠标左键操作。
