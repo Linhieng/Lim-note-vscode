@@ -94,6 +94,8 @@
     "files.trimTrailingWhitespace": true,
     // 删除文件末尾多余空行
     "files.trimFinalNewlines": true,
+    // 配置文件(夹)对话框的默认路径
+    "files.dialog.defaultPath": "D:\\",
 
     // 不显示选项卡区域
     "workbench.editor.showTabs": "none",
