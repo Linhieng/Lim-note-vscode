@@ -202,7 +202,7 @@
 
     // Set the executor of each language. 设置各个语言运行代码（运行器）。
     "code-runner.executorMap": {
-        // 各个语言所对应的 key 是根据 vscode 给定的语言类型决定的，可以通过 'ctrl+k m' 查看
+        // 该配置中的 key 值是 editorLangId，各个语言的 editorLangId 值可以通过 'ctrl+k m' 查看
 
         // 在 output 终端默认编码格式是 GBK，暂时没有找到更改 output 终端默认编码格式的方案（除非系统级别上设置为 UTF-8 编码）
         "python": "set PYTHONIOENCODING=utf8 && python -u",
