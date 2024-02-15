@@ -1,4 +1,11 @@
 {
+
+    "editor.codeActionsOnSave": {
+        // 并不适用与所有 fixAll，通常是搭配 ts 语言和 TSLint/ESLint 插件
+        "source.organizeImports": "always",
+        "source.fixAll": "always"
+    },
+
     // explorer.autoReveal 配置默认是为 true 的, 也就是所有的文件和文件夹, 当打开他们的时候, 所对应的文件和文件夹将会 reveal 和 selected
     // 在这里 reveal 和 select 的意思是, 对应的文件和文件夹将会自定被聚焦, 举一个例子来说明更加容易理解
     // 当我们在一个 js 文件中, 点击某个包, 它会立即打开对应的源文件, 这个源文件是在 node_modules 文件夹中的
