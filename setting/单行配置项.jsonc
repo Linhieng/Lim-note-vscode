@@ -22,6 +22,19 @@
     // 移动光标时提供动画过渡效果
     "editor.cursorSmoothCaretAnimation": "on",
 
+    // 左右无空格时也可以自动配对 [{(
+    "editor.autoClosingBrackets": "always",
+    // 左右无空格时也可以自动配对 '"
+    "editor.autoClosingQuotes": "always",
+    // 通常设置为 never 用于取消自动闭合注释。详见 PR#192335。其 always 和 languageDefined 没什么区别
+    "editor.autoClosingComments": "never",
+    // auto 表示删除引号或括号时，只有当两个符号是相邻且是 vscode 提供的自动插入的符号时，才会自动删除右侧的符号。always 则始终删除两个相邻的符号。
+    "editor.autoClosingDelete": "always",
+    // type over closing quotes 中的 over 是闭合的意思，表示是否键入闭合引号或右括号时
+    "editor.autoClosingOvertype": "always",
+    // 当选中内容时键入，是否将键入内容进行环绕。只能根据语言所定义，没办法自定定义符号是比较可惜的。
+    "editor.autoSurround": "languageDefined",
+
     // jsDom 属于 word, 关闭后将无法提示 jsDom
     "editor.suggest.showWords": false,
     // 预览 suggest
@@ -81,6 +94,8 @@
     "files.trimTrailingWhitespace": true,
     // 删除文件末尾多余空行
     "files.trimFinalNewlines": true,
+    // 配置文件(夹)对话框的默认路径
+    "files.dialog.defaultPath": "D:\\",
 
     // 不显示选项卡区域
     "workbench.editor.showTabs": "none",
@@ -206,6 +221,15 @@
     ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
+
+    // 时间格式为相对时间
+    "git-graph.date.format": "Relative",
+    // 图形为拓扑结构，详见 https://git-scm.com/docs/git-log#_commit_ordering
+    "git-graph.repository.commits.order": "topo",
+    // 显示头像
+    "git-graph.repository.commits.fetchAvatars": true,
+    // 将非当前所在提交的祖先提交设置为暗色（mute）
+    "git-graph.repository.commits.mute.commitsThatAreNotAncestorsOfHead": true,
 
     // 指定预览时选用主题
     "markdown-preview-enhanced.previewTheme": "medium.css",
