@@ -1,5 +1,15 @@
 # 草稿
 
+## 零碎
+
+多文件 workspace + profile 自定义 setting 时，会出现以下 settings json 文件：
+
+- User: 属于当前 profile 的配置。通过界面操作时，vscode 会更新这里面的配置
+- Folder: workspace 中每个文件夹所属
+- Application: the default profile settings json. 只有一部分配置能生效，如 `http.proxy`,
+- Workspace: 这就是是我想要，自己编辑的 setting 不会被 vscode 自动修改。
+- Default: omit.
+
 ## 案例解决方案
 
 ### 有关 markdown 智能粘贴的那些事
