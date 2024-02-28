@@ -52,7 +52,7 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     // 粘贴时自动格式化粘贴的内容。要求该文件有配置默认格式化程序，并且该程序支持对某一片段进行格式化。
     "editor.formatOnPaste": true,
-    // 可以用于替代  rename tag, 暂时不知道是否有其他副作用
+    // 不支持多行操作，不如 rename tag 插件
     "editor.linkedEditing": true,
     // "editor.foldingStrategy": "indentation", // 不建议，函数将变得无法折叠。
     // 滚动时, 将嵌套的当前范围在顶部粘滞显示. 比如滚动时, 当前所在函数的首行会一直显示在顶部, 如果该函数是嵌套在另外一个函数内的, 则这两个函数都会显示在顶部. 当嵌套的太多, 顶部也会被占用太多行, 此时可以使用 editor.stickyScroll.maxLineCount 指定最大行数.
