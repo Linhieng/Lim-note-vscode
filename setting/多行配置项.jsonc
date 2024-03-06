@@ -1,7 +1,7 @@
 {
 
     "editor.codeActionsOnSave": {
-        // 并不适用与所有 fixAll，通常是搭配 ts 语言和 TSLint/ESLint 插件
+        // 并不适用与所有 fixAll，通常是搭配 ts 语言和 ESLint 插件
         "source.organizeImports": "always",
         "source.fixAll": "always"
     },
