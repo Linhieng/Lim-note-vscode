@@ -1,6 +1,6 @@
 # [代码片段](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 
-[我的代码片段在这里](../backup/%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.code-snippets)
+<!-- [我的代码片段在这里](../backup/%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.code-snippets) -->
 
 全局代码片段支持以下参数：
 
